@@ -1,0 +1,51 @@
+<div class="row container-fluid">
+	<div class="col-md-9">
+		<div class="row">
+			<% @products.each do |product| %>
+			<div class="col-md-3 padding-2">
+				<div class="well well-sm bg-white product js-product" data-id="<%=product.id%>" >
+					<div class="row">
+						<div class="col-md-12">
+							<%= image_tag "download.jpg" ,width: 20,height: 20 ,class: "float-right" %>
+							<div class="js-product-name"><%= product.name %></div>
+							<small><%= product.title %></small>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="float-right"> Rs 40 </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="well well-sm">
+			<h3>CART:</h3>
+			<div id="line-items">
+		  </div>
+    </div>
+    <button class="btn btn-primary text-center">PROCEED</button>
+	<div>
+	<div id="line-item-container" class="hide" >
+		<div class="well well-sm bg-white line-item">
+			<h4 id="line-item-inner"> </h4>
+			<div class="row">
+				<div class="col-md-1 sub">
+			  <p class="glyphicon glyphicon-chevron-left">
+			  </div>
+			  <div class="col-md-1">
+			  1
+			  </div>
+        <div class="col-md-1 add">
+			  <p class="glyphicon glyphicon-chevron-right">
+			  </div>
+			  <div class="col-md-1 col-md-offset-9">
+			  Rs:
+			  </div> 
+			</div>
+		</div>
+	</div>
+</div>

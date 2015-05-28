@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  price: 1
+  title: MyString
+  ingredients: MyString
+  sale_price: 1.5
+  packing_cost: 1
+  spicy: 1
+  hot: 1
+  image_url: MyString
+
+two:
+  name: MyString
+  price: 1
+  title: MyString
+  ingredients: MyString
+  sale_price: 1.5
+  packing_cost: 1
+  spicy: 1
+  hot: 1
+  image_url: MyString
