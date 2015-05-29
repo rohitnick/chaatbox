@@ -1,5 +1,5 @@
 .food-background {
-	background-image: url(/assets/food-background.jpg);
+	background-image: image-url(food-background);
 	background-repeat: repeat;
 }
 .bg-white{
@@ -12,8 +12,8 @@
    padding: 0 !important;
    margin: 0 !important;
 }
-.padding-2{
-	padding: 2px !important;
+.padding-5{
+	padding: 5px !important;
 }
 .float-right{
    float:right;
