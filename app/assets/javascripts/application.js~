@@ -16,4 +16,16 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-
+function minus()
+{
+x=document.getElementById('num').value;
+if(x!=1)
+{
+document.getElementById('num').value=x-1;
+}
+}
+function plus()
+{
+x=document.getElementById('num').value;
+document.getElementById('num').value=x-(-1);
+}

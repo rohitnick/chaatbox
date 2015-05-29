@@ -56,7 +56,7 @@
 		        </div>
                 </div>
     <button class="btn btn-primary margin-left proceed">PROCEED</button>
-     <h4 class="please-select text-center color-red"></h4>
+     <h4 class="please-select margin-left color-red"></h4>
 	
 
 	<div id="line-item-container" class="hide" >

@@ -7,7 +7,7 @@ $(document).on "page:change", ->
     $(".details").slideUp()
     $("#line-items").show()
     $(".proceed").show()
-    $(".please-select").hide()
+    $(".please-select").hide();
     id = $(this).attr('data-id')
     if $(this).hasClass('js-product-selected')
       $('#line-items #'+id).remove()
