@@ -12,7 +12,7 @@ $(this).parents("div.line-item").find("#price1").html((x-1)*y);
 $(this).find(".plus").click(function(){
 $(this).parents("div.line-item").find(".num").val(x-(-1));
 $(this).parents("div.line-item").find("#price1").html((x-(-1))*y);
-}
+});
 });
 });
 });
