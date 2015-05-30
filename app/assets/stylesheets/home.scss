@@ -4,7 +4,22 @@
 .product{
 	height:270px;
 }
-#price{
-	margin-top:45px;
-	float:right;
+.product:hover {
+	border-color: rgb(193, 82, 59);
+}
+.js-product-selected {
+	border-color: green !important;
+}
+.item-name {
+	color: rgb(34, 34, 34);
+	font-size: 16px;
+}
+.item-price {
+  margin-top: 9px;
+  float: right;
+  font-size: 16px;
+  color: white;
+  width: 60px;
+  background-color: rgb(193, 82, 59);
+  padding-left: 15px;
 }

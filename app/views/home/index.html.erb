@@ -2,72 +2,80 @@
   <div class="col-md-9">
     <div class="row">
       <% @products.each do |product| %>
-      <div class="col-md-3 padding-5">
+      <div class="col-md-3 col-sm-6 padding-5">
         <div class="well well-sm bg-white product js-product" data-id="<%=product.id%>" >
-          <%= image_tag(product.image_url, :width => 200 , :height => 160) %>
-          <%= image_tag "download.jpg" ,width: 20,height: 20 ,class: "float-right" %>
-          <h5 class="js-product-name"><%= product.name %></h5>
+          <%= image_tag(product.image_url, :width => 240 , :height => 160) %>
+          <h5 class="js-product-name item-name"><%= product.name %></h5>
           <small><%= product.title %></small>
           <br>
-          <br>
-          <p class="float-right">Rs:<span class="js-product-price"><%= product.price %> </span></p>
+          <span class="item-price"> &#8377<i class="js-product-price"><%= product.price %> </i></span>
         </div>
       </div>
       <% end %>
     </div>
   </div>
   <div class="col-md-3">
-   <div class="well well-sm">
-     <div class="details display-none">
-
-      <h3 class="margin-left">Details</h3><hr>
-      <form novalidate="novalidate" id="user-details">
-        <div>
-          <label class="text-center"><span>MOBILE NO.:</span><br>
-            <input id="mobile-input" maxlength="10" size="33" required="" pattern="[7-9]{1}\d{9}" type="text">
-          </label><br>
-          <small class="error">A valid 10-digit mobile number is required.</small>
-        </div>
-        <div>
-          <label class="text-center"><span>NAME:</span><br>
-            <input id="name-input" size="33"  required="" pattern="[a-zA-Z .']+" type="text">
-          </label><br> 
-          <small class="error">A valid name is required.</small>
-        </div>
-        <div>
-          <label  class="text-center"><span>EMAIL:</span><br>
-            <input id="email-input" size="33"  required="" type="email">
-          </label><br> 
-          <small class="error">A valid email is required.</small>
-        </div>
-        <div id="delivery">
-          <label  class="text-center""><span>ADDRESS:</span><br>
-            <textarea class="form-control" cols="30" rows="4" name="address"></textarea>
-          </label><br>          
-          <small class="error">A valid address is required.</small><br>
-        </div>
-        <button class="proceed-button btn btn-primary margin-left" type="submit">Proceed</button>                           
-      </form>
+    <div class="well well-sm">
+      <div class="details hide">
+        <center><h3>Delivery Details</h3></center>
+        <hr>
+        <form novalidate="novalidate" id="user-details">
+          <div>
+            <label class="text-center"><span>Name:</span><br>
+              <input id="name-input" size="33"  required="" pattern="[a-zA-Z .']+" type="text">
+            </label><br> 
+            <small class="error">A valid name is required.</small>
+          </div>
+          <div>
+            <label class="text-center"><span>Phone No.</span><br>
+              <input id="mobile-input" maxlength="10" size="33" required="" pattern="[7-9]{1}\d{9}" type="text">
+            </label><br>
+            <small class="error">A valid 10-digit mobile number is required.</small>
+          </div>
+          <div>
+            <label  class="text-center"><span>Email:</span><br>
+              <input id="email-input" size="33"  required="" type="email">
+            </label><br> 
+            <small class="error">A valid email is required.</small>
+          </div>
+          <div id="delivery">
+            <label class="text-center"><span>Address:</span><br>
+              <textarea class="form-control" cols="30" rows="4" name="address"></textarea>
+            </label><br>          
+            <small class="error">A valid address is required.</small><br>
+          </div>
+          <center><button class="btn btn-success" type="submit">Submit</button></center>
+        </form>
+      </div>
+      <!-- End Delivery Details -->
+      <!-- Order Summary -->
+      <div id="line-items">
+        <center><h4>Order Summary</h4></center>
+        <hr>
+      </div>
+      <!-- End Order Summary -->
     </div>
-    <div id="line-items">
-      <h4 class="margin-left">Order Details</h4>
-      <hr>
-    </div>
+    <center><button class="btn btn-success js-proceed">PROCEED</button></center>
+    <h4 class="please-select text-center red"></h4>
   </div>
-  <button class="btn btn-primary margin-left proceed">PROCEED</button>
-  <h4 class="please-select text-center color-red"></h4>
 
 
   <div id="line-item-container" class="hide" >
     <div class="well well-sm bg-white line-item">
-     <p id="line-item-inner" > </p>
-      <div class="input-group">
-        <span class="input-group-addon"><b>-</b></span>
-        <input type="integer" class="form-control" aria-label="Quantity" value="1">
-        <span class="input-group-addon"><b>+</b></span>
+      <h5 id="line-item-inner" class="item-name" > </h5>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="input-group">
+            <span class="input-group-addon"><b>-</b></span>
+            <input type="integer" class="form-control" aria-label="Quantity" value="1">
+            <span class="input-group-addon"><b>+</b></span>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <span class="item-price"> &#8377<i id="price"></i></span>
+        </div>
       </div>
-         <p class="hide" id="price"></p>
-         <p>Rs:<span id="price1"></span></p>
+    </div>
+  </div>
+</div>
 
-       </div>
-     </div>
