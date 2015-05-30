@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .product{
 	height:270px;
+	margin-bottom: 0px !important;
 }
 .product:hover {
 	border-color: rgb(193, 82, 59);
@@ -11,7 +12,7 @@
 	border-color: green !important;
 }
 .item-name {
-	color: rgb(34, 34, 34);
+	color: #222222;
 	font-size: 16px;
 }
 .item-price {
@@ -22,4 +23,12 @@
   width: 60px;
   background-color: rgb(193, 82, 59);
   padding-left: 15px;
+}
+.heading {
+	font-size: 18px;
+	color: #000;
+}
+.dotted-bottom-border {
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
 }
