@@ -21,22 +21,6 @@
 .margin-left{
 	margin-left:100px;
 }
-@font-face {
-    font-family: "My Custom Font";
-    src: url('df.ttf') format("truetype");
-}
-.customfont { 
-    font-family: "My Custom Font", Verdana, Tahoma;
-    font-size:25px;
-}
-@font-face {
-    font-family: "Darleston";
-    src: url('Darleston.otf') format("truetype");
-}
-.customfont1 { 
-    font-family: "Darleston", Verdana, Tahoma;
-    font-size:25px;
-}
 .display-none{
 display:none;
 }

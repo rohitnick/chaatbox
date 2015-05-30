@@ -4,12 +4,10 @@
       <% @products.each do |product| %>
       <div class="col-md-3 padding-5">
         <div class="well well-sm bg-white product js-product" data-id="<%=product.id%>" >
-          <%= image_tag "download.jpg" ,width: 20,height: 20 ,class: "float-right" %>
-          <div class="js-product-name customfont"><%= product.name %></div>
-          <small><%= product.title %></small>
-          <br>
-          <br>
           <%= image_tag(product.image_url, :width => 200 , :height => 160) %>
+          <%= image_tag "download.jpg" ,width: 20,height: 20 ,class: "float-right" %>
+          <h5 class="js-product-name"><%= product.name %></h5>
+          <small><%= product.title %></small>
           <br>
           <br>
           <p class="float-right">Rs:<span class="js-product-price"><%= product.price %> </span></p>
@@ -25,25 +23,25 @@
       <h3 class="margin-left">Details</h3><hr>
       <form novalidate="novalidate" id="user-details">
         <div>
-          <label class="text-center"><span class="customfont1">MOBILE NO.:</span><br>
+          <label class="text-center"><span>MOBILE NO.:</span><br>
             <input id="mobile-input" maxlength="10" size="33" required="" pattern="[7-9]{1}\d{9}" type="text">
           </label><br>
           <small class="error">A valid 10-digit mobile number is required.</small>
         </div>
         <div>
-          <label class="text-center"><span class="customfont1">NAME:</span><br>
+          <label class="text-center"><span>NAME:</span><br>
             <input id="name-input" size="33"  required="" pattern="[a-zA-Z .']+" type="text">
           </label><br> 
           <small class="error">A valid name is required.</small>
         </div>
         <div>
-          <label  class="text-center"><span class="customfont1">EMAIL:</span><br>
+          <label  class="text-center"><span>EMAIL:</span><br>
             <input id="email-input" size="33"  required="" type="email">
           </label><br> 
           <small class="error">A valid email is required.</small>
         </div>
         <div id="delivery">
-          <label  class="text-center""><span class="customfont1">ADDRESS:</span><br>
+          <label  class="text-center""><span>ADDRESS:</span><br>
             <textarea class="form-control" cols="30" rows="4" name="address"></textarea>
           </label><br>          
           <small class="error">A valid address is required.</small><br>
@@ -52,7 +50,8 @@
       </form>
     </div>
     <div id="line-items">
-      <h3 class="margin-left cart">CART:</h3>
+      <h4 class="margin-left">Order Details</h4>
+      <hr>
     </div>
   </div>
   <button class="btn btn-primary margin-left proceed">PROCEED</button>
@@ -61,23 +60,14 @@
 
   <div id="line-item-container" class="hide" >
     <div class="well well-sm bg-white line-item">
-     <p id="line-item-inner" class="customfont"> </p>
-     <div class="row">
-       <div class="col-md-1" onclick="minus();">
-         <p class="glyphicon glyphicon-minus">
-         </div>
-         <div class="col-md-1">
-           <input type="integer" size="2" value="1" id="num"> 
-         </div>
-         <div class="col-md-1 col-md-offset-1" onclick="plus();">
-           <p class=" add glyphicon glyphicon-plus ">
-           </div>
-
-           <div class="col-md-1 col-md-offset-4">
-             <p class="hide" id="price"></p>
-             <p>Rs:<span id="price1"></span></p>
-           </div>
-         </div>
+     <p id="line-item-inner" > </p>
+      <div class="input-group">
+        <span class="input-group-addon"><b>-</b></span>
+        <input type="integer" class="form-control" aria-label="Quantity" value="1">
+        <span class="input-group-addon"><b>+</b></span>
+      </div>
+         <p class="hide" id="price"></p>
+         <p>Rs:<span id="price1"></span></p>
 
        </div>
      </div>
