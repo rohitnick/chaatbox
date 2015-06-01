@@ -11,7 +11,9 @@ $(document).ready(function(){
       $(".please-select").text("**Please Select Item**");
     }
   });
-  $(".error").hide();  
+  $(".error").hide();
+var x=2;  
+alert(x);
 });
 
 

@@ -12,7 +12,7 @@ $(document).on "page:change", ->
     if $(this).hasClass('js-product-selected')
       price = $(this).find('.js-product-price').html()
       quantity=$('#num'+id).val()
-      $('#total').html($('#total').html()-(quantity*price))
+      $('#total').html($('#total').html()-(d*price))
       $('#line-items #'+id).remove()
       $(this).removeClass('js-product-selected')
     else
