@@ -7,9 +7,9 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
 	</head>
-	<body style="background:url('/assets/p.jpg')">
+	<body style="background:url('/assets/food.jpg')">
 		<%= render '/layouts/header' %>
 		<%= yield %>
-
+                <%= render '/layouts/footer' %>
 	</body>
 </html>
