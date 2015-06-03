@@ -12,6 +12,7 @@ $(document).on "page:change", ->
     if $(this).hasClass('js-product-selected')
       price = $(this).find('.js-product-price').html()
       quantity=$('#num'+id).val()
+      $('.finish-message').slideUp()
       $('#total').html($('#total').html()-(quantity*price))
       $('#line-items #'+id).remove()
       $(this).removeClass('js-product-selected')
@@ -30,6 +31,6 @@ $(document).on "page:change", ->
       $('#line-item-container .line-item .pricess').html(price)
       $('#line-items').append($('#line-item-container').html())
       $(this).addClass('js-product-selected')
-   
+      $('.finish-message').slideUp()
     return
   return
