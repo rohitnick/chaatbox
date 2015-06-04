@@ -32,7 +32,11 @@ display:none;
 .margin-top{
 margin-top:15px;
 }
-.blue
+.green
 {
-  color: blue;
+  color: green;
+}
+.white
+{
+  color: white;
 }

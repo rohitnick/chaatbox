@@ -4,7 +4,7 @@
     <div class="row">
       <% @products.each do |product| %>
       <div class="col-md-3 col-sm-6 padding-5">
-        <div class="well well-sm bg-white product js-product" data-id="<%=product.id%>" >
+        <div class="well well-sm bg-white product js-product" id="<%=product.id%>" >
           <%= image_tag(product.image_url, :width => 230 , :height => 160) %>
           <h5 class="js-product-name item-name"><%= product.name %></h5>
           <small><%= product.title %></small>
@@ -23,8 +23,8 @@
 
 
 
-          <div>
-            <label class=""><span>Name:</span><br>
+<div>
+            <label class="text-center"><span>Name:</span><br>
               <input id="name-input" size="33"  required="" type="text">
             </label>
             <p id="error1" class="text-center red"></p>
@@ -48,28 +48,22 @@
             <p id="error4" class="text-center red"></p>
           </div>
           <center><button class="btn btn-success" id="finish">Submit</button></center>
-        
-
-
-
-
-
-
       </div>
       <!-- End Delivery Details -->
       <!-- Order Summary -->
       <div id="line-items">
         <center class="dotted-bottom-border">
-          <b class="heading">Order Summary:<span id="total">0</span></b>
+          <b class="heading">Order Summary:  <br>        
+ Order Total:Rs&nbsp<span id="total">0</span></b>
         </center>
-        <p>
-      </div>
+      <p>
+</div>
       <!-- End Order Summary -->
 <div class="finish-message display-none">
 <h3 class="text-center"><i>Thanks For Ordering</i></h3>
 <br>
 <br>
-<h5>You Will Recieve order within 45 minutes </h5>
+<h5>You Will Recieve order within 40 minutes </h5>
 </div>
  
     </div>
@@ -80,7 +74,14 @@
 
   <div id="line-item-container" class="hide" >
     <div class="well well-sm bg-white line-item margin-5">
-      <h5 id="line-item-inner" class="item-name"> </h5>
+      <div class="row">
+       <div class="col-sm-6 col-xs-6">
+       <h5 id="line-item-inner" class="item-name"> </h5>
+       </div>
+       <div class="col-sm-1 col-xs-1 col-sm-offset-4 col-xs-offset-4 cross">
+       <%= image_tag('cross.jpg',width:'10',height:'10') %>
+       </div>
+      </div>
       <div class="row">
         <div class="col-md-6">
           <div class="input-group">
