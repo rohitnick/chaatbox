@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529061418) do
+ActiveRecord::Schema.define(version: 20150604083057) do
 
   create_table "line_items", force: :cascade do |t|
     t.integer  "order_id"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20150529061418) do
     t.integer  "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "name"
+    t.string   "mobilenumber"
+    t.string   "email"
+    t.string   "message"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "orders", force: :cascade do |t|
