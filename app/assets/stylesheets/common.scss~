@@ -29,3 +29,10 @@
 {
 display:none;
 }
+.margin-top{
+margin-top:15px;
+}
+.blue
+{
+  color: blue;
+}

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  get 'home/index'
-  get 'home/contact'
-  get 'home/aboutus'
+ get 'contact' => 'home#contact'
+get 'aboutus' => 'home#aboutus'
+get 'index' => 'home#index'
   post 'create' => 'home#create'
 
   # The priority is based upon order of creation: first created -> highest priority.

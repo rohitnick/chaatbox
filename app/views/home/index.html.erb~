@@ -24,7 +24,7 @@
 
 
           <div>
-            <label class="text-center"><span>Name:</span><br>
+            <label class=""><span>Name:</span><br>
               <input id="name-input" size="33"  required="" type="text">
             </label>
             <p id="error1" class="text-center red"></p>
