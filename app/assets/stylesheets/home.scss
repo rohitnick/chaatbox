@@ -32,3 +32,15 @@
 	border-bottom-style: dotted;
 	border-bottom-width: 1px;
 }
+#tnc-button {
+  position: fixed;
+  bottom: 0px;
+  right: 25px;
+  font-size: 14px;
+  background-color: black;
+  padding: 10px;
+  color: white;
+}
+ul.navbar-right.nav li {
+	font-size: 16px;
+}
