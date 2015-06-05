@@ -8,6 +8,12 @@
 .bg-green{
 	background-color: #dff0d8 !important;
 }
+.bg-red {
+  background-color: #EF3E3A !important;
+}
+.bg-transparent {
+  background-color: rgba(255,255,255,0.15) !important;
+}
 .nopadding {
   padding: 0 !important;
   margin: 0 !important;
@@ -20,7 +26,7 @@
 }
 .red
 {
-  color: red;
+  color: #EF3E3A;
 }
 .margin-5{
   margin: 5px !important;
@@ -39,4 +45,7 @@ margin-top:15px;
 .white
 {
   color: white !important;
+}
+.font-18 {
+  font-size: 18px;
 }
