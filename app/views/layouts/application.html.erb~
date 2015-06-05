@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<title>Chaatbox</title>
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -7,9 +8,9 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
 	</head>
-	<body style="background:url('/assets/food1.jpg')">
+	<body style="background:url('/assets/food.jpg')">
             <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>(function(d, s, id) 
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
