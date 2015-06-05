@@ -7,7 +7,7 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
 	</head>
-	<body style="background:url('/assets/food.jpg')">
+	<body style="background:url('/assets/food1.jpg')">
             <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -18,6 +18,6 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 		<%= render '/layouts/header' %>
 		<%= yield %>
-                <%= render '/layouts/footer' %>
+                <%= render '/layouts/footer' %> 
 	</body>
 </html>
