@@ -1,3 +1,38 @@
 
-<a id="tnc-button" href="#">Terms &amp; Conditions</a>
+<a id="tnc-button" data-toggle="modal" data-target="#terms">Terms &amp; Conditions</a>
+
+
+
+<div class="modal fade" id="terms" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h2 class="modal-title" id="gridSystemModalLabel">Terms & Conditions</h2>
+        </div>
+        <div class="modal-body">
+          <h2>Terms &amp; Conditions</h2>
+                <p style="font-size: 12px;">
+                    <b>Prices</b><br>
+                    All of our prices are inclusive of VAT. Service Tax will be charged extra as applicable.
+                    On the occasion that any item is incorrectly priced, we reserve the right to cancel the purchase and relist the product at the correct price.<br><br>
+                    <b>Privacy</b><br>
+                    We only store necessary information required to make a purchase.
+                    Your credit card information is not stored by us and is always processed across a secure server.
+                    We do not sell or lease any of your personal information. All information left with www.rushhrs.com is entirely confidential.<br><br>
+                    <b>Refunds Policy</b><br>
+                    www.rushhrs.com is committed to ensuring your satisfaction with any product you have ordered from us. If you are not satisfied we will replace/refund as per your wish.<br><br>
+
+                    <b>Privacy Policy</b><br>
+                    This is for reasons of fraud protection.  Fraudulent orders will be submitted to the appropriate authorities.
+                    Foxglove Enterprise Private Limited collects personally identifiable information that you may voluntarily provide on online forms, which may include: user registration, contact requests, guest comments, online surveys, and other online activities. The personally identifiable information (Personal Information) collected on this Site can include some or all of the following: your name, address, telephone number, email addresses, demographic information, and any other information you may voluntarily provide.
+                    In addition to the Personal Information identified above, our web servers automatically identify computers by their IP addresses. Company may use IP addresses to analyze trends, administer the site&gt;track users movement and gather broad demographic information for aggregate use. To emphasize, IP addresses are not linked to Personal info.
+                </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 

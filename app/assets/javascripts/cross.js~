@@ -1,4 +1,7 @@
-
+//$(document).ready(function(){
+//$('.line-item').each(function(i)
+//{
+//(this).find
 function cross1()
 { 
 var x=$('#num1').val();
