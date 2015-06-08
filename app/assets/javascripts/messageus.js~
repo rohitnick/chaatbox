@@ -1,31 +1,17 @@
 $(document).ready(function(){
-$('#details').submit(function(e){
+$('#messageus').submit(function(e){
 e.preventDefault();
-$('.details').slideUp();
-$('.finish-message').slideDown();
-var n=document.getElementById("name-input").value;
+var n=document.getElementById("name").value;
 var t=$('#total').html();
-var m=document.getElementById("mobile-input").value;
-var e=document.getElementById("email-input").value;
-var a=document.getElementById("address-input").value;
-var x=''; var q='';
-$('.line-item').each(function(i)
-{
-x=x+$(this).find('#line-item-inner').html() + '.';
-q=q+$(this).find('.num').val() + '.';
-});
-var y=x.split('.');
-var length=y.length-2;
-y.splice(length,2);
-var z=q.split('.');
-var length=z.length-2;
-z.splice(length,2)
-
+var m=document.getElementById("mobile").value;
+var e=document.getElementById("email").value;
+var a=document.getElementById("message").value;
+alert(a+m+e+n);
 $.ajax({
    type: "POST",
-   url: 'create',
+   url: 'message',
    dataType: 'json',
-   data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,customers_email_address: e,order_total: t,product: y,quantity: z}})
+   data: $.param({contacts: {name: n,email: e,mobile: m,message: a}})
 });
 });
 });

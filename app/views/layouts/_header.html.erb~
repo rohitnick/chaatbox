@@ -5,7 +5,7 @@
      <%= link_to image_tag('logo_white.png',height:'43'),root_path %>
    </div>
    <ul class="nav navbar-nav navbar-right">
-      <li data-toggle="modal" data-target="#exampleModal"><a class="white" > Contact Us </a></li>
+      <li data-toggle="modal" data-target="#exampleModal"><a class="white" href="#" > Contact Us </a></li>
       <li><a href="#" class="white"><b class="fa fa-phone"></b> 09795058677 </a></li>
 </ul>
 </div>
@@ -19,7 +19,7 @@
         <h4 class="modal-title" id="exampleModalLabel">Leave us a message....</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal">
+        <form id="messageus" class="form-horizontal">
     <div class="form-group">
         <label for="name" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
@@ -41,12 +41,12 @@
     <div class="form-group">
         <label for="message" class="col-sm-2 control-label">Message</label>
         <div class="col-sm-10">
-            <textarea class="form-control" rows="4" name="message"  required="true" ></textarea>
+            <textarea class="form-control" rows="4" name="message" id="message" required="true" ></textarea>
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-10 col-sm-offset-2">
-            <input id="submit" name="submit" type="submit" data-dismiss="modal" value="Send Message" class="btn btn-primary">
+        <div class="col-sm-7 col-sm-offset-5">
+            <input name="submit" type="submit" value="Send Message" class="btn btn-success">
        </div>
 </div>
 </form>
