@@ -35,7 +35,7 @@
 #tnc-button {
   position: fixed;
   bottom: 0px;
-  right: 5px;
+  right: 425px;
   font-size: 14px;
   background-color: #EF3E3A;
   padding: 10px;

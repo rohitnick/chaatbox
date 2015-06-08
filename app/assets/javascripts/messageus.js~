@@ -13,5 +13,6 @@ $.ajax({
    dataType: 'json',
    data: $.param({contacts: {name: n,email: e,mobile: m,message: a}})
 });
+$("#close").click();
 });
 });

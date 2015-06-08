@@ -46,7 +46,7 @@
     </div>
     <div class="form-group">
         <div class="col-sm-7 col-sm-offset-5">
-            <input name="submit" type="submit" value="Send Message" class="btn btn-success">
+            <input id="submit" name="submit" type="submit"  value="Send Message" class="btn btn-success">
        </div>
 </div>
 </form>
@@ -57,3 +57,12 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
