@@ -113,7 +113,6 @@
       <div class=" well weel-sm modal-body">
 <div class="col-sm-12">
 <h4>Order details:</h4>
-<hr>
 </div>
 <div class="row">
       <div class="confirmitemname col-sm-4">
@@ -135,13 +134,13 @@
       </div>
 <br>
 <hr>
-</div>
 <div class=" col-sm-12 text-center">
         <i><h4 class="red">***Order will be at your doorstep within 40 minutes***</h4></i>
       </div>
       <div>
         <button type="button" class="btn btn-danger float-right margin-right" id="closeconfirm" data-dismiss="modal">Close</button> 
       </div>
+</div>
 </div>
     </div>
   </div>

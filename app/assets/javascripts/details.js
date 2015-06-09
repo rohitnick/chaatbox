@@ -36,11 +36,11 @@ $(".confirmdetails").html("Name:&nbsp" + n + "<br><br>" +"Mobile:&nbsp" + m + "<
 
 
 
-/*$.ajax({
+$.ajax({
    type: "POST",
    url: 'create',
    dataType: 'json',
    data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,customers_email_address: e,order_total: t,product: y,quantity: z}})
-});*/
+});
 });
 });
