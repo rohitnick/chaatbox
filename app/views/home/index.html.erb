@@ -43,12 +43,12 @@
     </div>
     <div class="form-group">
         <div class="col-sm-8 col-sm-offset-3">
-            <input id="finish" name="submit" type="submit"  value="Proceed" class="btn btn-primary">
+            <input id="finish" name="submit" type="submit"  value="Confirm Order" class="btn btn-primary">
        </div>
     </div>
     <div class="form-group hide">
         <div class="col-sm-8 col-sm-offset-3">
-            <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="proceed" class="btn btn-primary">
+            <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-primary">
        </div>
      </div>
 </form>
@@ -70,7 +70,7 @@
         </div>
 
       </div>
-      <center><button class="btn btn-success js-proceed">PROCEED</button></center>
+      <center><button class="btn btn-success js-proceed">Proceed</button></center>
       <h4 class="please-select text-center red"></h4>
     </div>
 
@@ -82,15 +82,15 @@
            <h5 id="line-item-inner" class="item-name"> </h5>
          </div>
          <div class="col-sm-1 col-xs-1 col-sm-offset-4 col-xs-offset-5 cross">
-           <p class="red">&times</p>
+           <p class="red"><a href="#">&times</a></p>
          </div>
        </div>
        <div class="row">
         <div class="col-md-6">
           <div class="input-group">
-            <span class="input-group-addon minus"><b>-</b></span>
+            <span class="input-group-addon minus"><b><a href="#">-</b></a></span>
             <input type="integer" class="form-control num" area-label="Quantity" value="1">
-            <span class="input-group-addon plus"><b>+</b></span>
+            <span class="input-group-addon plus"><b><a href="#">+</b></a></span>
           </div>
         </div>
         <div class="col-md-6"> 
@@ -108,21 +108,23 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="confirmLabel">Confirm your order....</h4>
+        <i><h3 class="modal-title text-center" id="confirmLabel">Thanks For Ordering</h3></i>
       </div>
-      <div class="modal-body">
-<div class="row">
-      <div class="confirmitemname col-sm-6">
-       <h2>Items</h2>
-       <i><h4 id="confirmname"></h4></i>
-      </div>
-      <div class="confirmitemquantity col-sm-6">
-        <h2>Quantity</h2>
-        <i><h4 id="confirmquantity"></h4></i>
-      </div>
+      <div class=" well weel-sm modal-body">
+<div class="col-sm-12">
+<h4>Order details:</h4>
+<hr>
 </div>
-<br>
-<br>
+<div class="row">
+      <div class="confirmitemname col-sm-4">
+       <h4>Items</h4>
+       <i><h5 id="confirmname"></h5></i>
+      </div>
+      <div class="confirmitemquantity col-sm-8">
+        <h4>Quantity</h4>
+        <i><h5 id="confirmquantity"></h5></i>
+      </div>
+
       <div class=" col-sm-12">
         <i><h4 class="confirmtotal"></h4></i>
       </div>
@@ -131,11 +133,16 @@
       <div class=" col-sm-12">
         <i><h4 class="confirmdetails"></h4></i>
       </div>
+<br>
+<hr>
+<div class=" col-sm-12 text-center">
+        <i><h4 class="red">***Order will be at your doorstep within 40 minutes***</h4></i>
       </div>
-      <div class="modal-footer">
-         <button type="button" class="btn btn-success" id ="confirmorder" data-dismiss="modal">Confirm Order</button> 
-        <button type="button" class="btn btn-danger" id="back" data-dismiss="modal">Back</button> 
+      <div>
+        <button type="button" class="btn btn-danger float-right margin-right" id="closeconfirm" data-dismiss="modal">Close</button> 
       </div>
+</div>
+</div>
     </div>
   </div>
 </div>

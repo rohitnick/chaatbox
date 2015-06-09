@@ -15,7 +15,8 @@ $(document).on "page:change", ->
       $('.finish-message').slideUp()
       $('#total').html($('#total').html()-(quantity*price))
       $('#line-items #tag'+id).remove()
-      $(this).removeClass('js-product-selected')
+      $(this).removeClass('js-product-selected') 
+      $(this).removeClass('bg-green')
       $("#name-input").val("");
       $("#mobile-input").val("");
       $("#email-input").val("");
@@ -36,6 +37,7 @@ $(document).on "page:change", ->
       $('#line-item-container .line-item .pricess').html(price)
       $('#line-items').append($('#line-item-container').html())
       $(this).addClass('js-product-selected')
+      $(this).addClass('bg-green')
       $('.finish-message').slideUp()
       $("#name-input").val("");
       $("#mobile-input").val("");
