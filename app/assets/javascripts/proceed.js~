@@ -12,11 +12,6 @@ $(document).ready(function(){
     }
   });
   $(".error").hide();  
-  $("#delivery").click(function(){
-     $(".subarea").slideUp();
-      $(".details").slideDown();
-
-   });
 });
 
 

@@ -16,6 +16,7 @@
     </div>
   </div>
   <div class="col-md-3">
+     <center><h4 class="white">Order Outlet: Kadugodi,Bangalore</h4></center>
     <div class="well well-sm bg-transparent font-18">
       <div class="details display-none">
         <center><h3 class="white">Delivery Details</h3></center>
@@ -52,6 +53,16 @@
        </div>
      </div>
 </form>
+</div>
+<div class="text-center">
+<label class="text-center"><span class="white">Delivery SubArea</span><br>
+<br>
+                               <center><select required=""><option selected="selected" value="9055">Kadugodi,Whitefield</option></select></center>
+                               <span class="white"> <small>Delivery restricted to this subarea</small></span>
+<br>
+<br>
+                            </label>
+<button id="delivery" class="btn btn-success">Delivery</button>
 </div>
       <!-- End Delivery Details -->
       <!-- Order Summary -->
