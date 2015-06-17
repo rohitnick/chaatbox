@@ -23,10 +23,13 @@ $("#confirmquantity").append(z[i] + "<br>");
 }
 var n=document.getElementById("name-input").value;
 var t=$('#total').html();
+var t1=(($('#total').html())-($('#total').html())/10);
+
 var m=document.getElementById("mobile-input").value;
 var e=document.getElementById("email-input").value;
 var a=document.getElementById("address-input").value;
-$(".confirmtotal").html("Order Total : Rs" + t);
+$(".confirmtotal").html("Order Total : Rs" + "&nbsp" + t);
+$(".discounttotal").html("You have to pay Rs:" + "&nbsp" + t1 + "" + "&nbsp after discount.");
 $(".confirmdetails").html("<b>Name:&nbsp</b>" + "<br>" + n + "<br><br>" +"<b>Mobile:&nbsp</b>" + "<br>" + m + "<br><br>" + "<b>Email:&nbsp</b>" + "<br>" +  e + "<br>");
 $(".confirmaddress").html("<b>Address:&nbsp</b>" + "<br>" +  a)
 $.ajax({
