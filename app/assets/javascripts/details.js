@@ -27,7 +27,8 @@ var m=document.getElementById("mobile-input").value;
 var e=document.getElementById("email-input").value;
 var a=document.getElementById("address-input").value;
 $(".confirmtotal").html("Order Total : Rs" + t);
-$(".confirmdetails").html("Name:&nbsp" + n + "<br><br>" +"Mobile:&nbsp" + m + "<br><br>" + "Email:&nbsp" +  e + "<br><br>" + "Address:&nbsp" +  a);
+$(".confirmdetails").html("<b>Name:&nbsp</b>" + "<br>" + n + "<br><br>" +"<b>Mobile:&nbsp</b>" + "<br>" + m + "<br><br>" + "<b>Email:&nbsp</b>" + "<br>" +  e + "<br>");
+$(".confirmaddress").html("<b>Address:&nbsp</b>" + "<br>" +  a)
 /*$.ajax({
    type: "POST",
    url: 'create',

@@ -50,6 +50,9 @@
        </div>
 </div>
 </form>
+<br>
+<h4>Like us....</h4>
+<div class="fb-like" data-href="https://www.facebook.com/chaatbox" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" id="close" data-dismiss="modal">Close</button> 
