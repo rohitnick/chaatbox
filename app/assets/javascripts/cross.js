@@ -72,3 +72,12 @@ $('#8').removeClass('bg-green');
 $('#total').html($('#total').html()-(x*y));
 }
 
+function cross9()
+{ 
+var x=$('#num9').val();
+var y=$('#prices9').html();
+$('#line-items #tag9').remove();
+$('#9').removeClass('js-product-selected');
+$('#9').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
