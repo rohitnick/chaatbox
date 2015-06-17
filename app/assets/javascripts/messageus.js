@@ -6,12 +6,12 @@ var t=$('#total').html();
 var m=document.getElementById("mobile").value;
 var e=document.getElementById("email").value;
 var a=document.getElementById("message").value;
-/*$.ajax({
+$.ajax({
    type: "POST",
    url: 'message',
    dataType: 'json',
-   data: $.param({contacts: {name: n,email: e,mobile: m,message: a}})
-});*/
+   data: $.param({contacts: {name: n,email: e,mobile: m,review: a}})
+});
 $("#close").click();
 });
 });
