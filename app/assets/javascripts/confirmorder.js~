@@ -3,6 +3,5 @@ $('#closeconfirm').click(function(e){
 $("#confirmname").empty();
 $('#confirmquantity').empty();
 $('.confirmtotal').empty();
-$(".loadwebsite").click();
 });
 });
