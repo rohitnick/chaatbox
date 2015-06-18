@@ -3,7 +3,7 @@
   <div class="col-md-9">
     <div class="row">
       <% @products.each do |product| %>
-      <div class="col-md-3 col-sm-6 padding-5">
+      <div class="col-md-4 col-sm-6 padding-5">
         <div class="well well-sm bg-white product js-product" id="<%=product.id%>" >
           <%= image_tag(product.image_url, :width => 230 , :height => 160) %>
           <h5 class="js-product-name item-name"><%= product.name %></h5>
