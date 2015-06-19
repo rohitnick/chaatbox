@@ -8,6 +8,8 @@ $(document).on "page:change", ->
     $("#line-items").show()
     $(".js-proceed").show()
     $(".please-select").hide()
+    $('.subarea').slideUp()
+    $("#minorder").hide();
     id = $(this).attr('id')
     if $(this).hasClass('js-product-selected')
       price = $(this).find('.js-product-price').html()
