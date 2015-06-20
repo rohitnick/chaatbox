@@ -1,5 +1,0 @@
-$(document).ready(function(){
-$('.js-product').mouseenter(function(e){
-$(this).removeClass("bg-white")
-});
-});
