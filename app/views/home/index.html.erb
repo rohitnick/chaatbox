@@ -1,6 +1,7 @@
-<center><h5 class="white">**Exclusive 10 % discount on all orders above Rs:100** Hurry up limited period offer </h5></center>
+
 <div class="row container-fluid">
   <div class="col-md-9">
+    <center><h5 class="white">Early bird 10 % discount on all orders above Rs 100. </h5></center>
     <div class="row">
       <% @products.each do |product| %>
       <div class="col-md-3 col-sm-6 padding-5">
@@ -50,12 +51,12 @@
     </div>
     <div class="form-group">
         <div class="col-sm-8 col-sm-offset-3">
-            <input id="finish" name="submit" type="submit"  value="Confirm Order" class="btn btn-primary">
+            <input id="finish" name="submit" type="submit"  value="Confirm Order" class="btn btn-success">
        </div>
     </div>
     <div class="form-group hide">
         <div class="col-sm-8 col-sm-offset-3">
-            <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-primary">
+            <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-success">
        </div>
      </div>
 </form>
@@ -77,7 +78,7 @@
                             </label>
 <div class="row">
 <div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
-<button id="delivery" class="btn btn-success">Delivery</button>
+<button id="delivery" class="btn btn-success"> Proceed </button>
 </div>
 </div>
 </div>
@@ -87,7 +88,7 @@
         <center class="dotted-bottom-border white">
            Order Total : &#8377<span id="total">0</span>
          </center>
-         <center><h6 class="white">*inclusive of delivery and packing charges</h6></center> 
+         <center><h6 class="white">*inclusive of packaging and delivery charges</h6></center> 
          </div>
          <!-- End Order Summary -->
          <div class="finish-message display-none white">
@@ -100,7 +101,7 @@
       </div>
       <center><button class="btn btn-success js-proceed">Proceed</button></center>
       <h4 class="please-select text-center red"></h4>
-      <h4 id="minorder" class="white display-none text-center">**Minimum order is &#8377 60**</h4>
+      <h4 id="minorder" class="white display-none text-center">**Minimum order amount is &#8377 60**</h4>
     </div>
 
 

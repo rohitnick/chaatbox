@@ -2,42 +2,45 @@
 <html>
 <head>
 	<title>Chaatbox:Reviving tastebuds r</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
-<meta charset="utf-8">
-    <title>Chaatbox - Reviving tastebuds  | Online chaat delivery in Kadugodi, Bangalore</title>
-		<meta property="og:title" content="Chaatbox - Reviving tastebuds  | Online chaat delivery in Kadugodi, Bangalore">
-		 <meta property="og:site_name" content="Chaatbox">
-		 <meta property="og:description" content="We deliver Chaat in bangalore,india for everyone convinience.We are serving in kadugodi,bangalore.Now get chaat in india @ Chaatbox.Chaatbox brings to you the spice of indian chaat at your very own doorsteps.We are a bangalore based food startup for delivering chaat.Our menu comprise of samosas,paanipuri,alootikki,rajkachori,katorichaat,samosachaat,dahikabab,dahi bhalla.">
-		 <meta property="og:url" content="http://www.chaatbox.com/">
-		 <meta property="og:publisher" content="https://www.facebook.com/chaatbox">
-<meta name="keywords" content="chaat,online chaat,chaat in bangalore,online chaat in india,spicy chaat,bangalore chaat,samosa in bangalore,online samosa in bangalore,paani puri in bangalore,online paanipuri in bangalore,chaatbox,tasty chaat in bangalore,dail a chaat,chaattokri,chaat wala,awesome chaat in bangalore,chaat for us,kadugodi chaat delivery,chaat delivery in whitefiels,chaat delivery in bnagalore,chaat delivery in india" />
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-64155768-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chaatbox - Reviving tastebuds  | Online chaat delivery in Kadugodi, Bangalore</title>
+	<meta property="og:title" content="Chaatbox - Reviving tastebuds  | Online chaat delivery in Kadugodi, Bangalore">
+	<meta property="og:site_name" content="Chaatbox">
+	<meta property="og:description" content="We deliver Chaat in bangalore,india for everyone convinience.We are serving in kadugodi,bangalore.Now get chaat in india @ Chaatbox.Chaatbox brings to you the spice of indian chaat at your very own doorsteps.We are a bangalore based food startup for delivering chaat.Our menu comprise of samosas,paanipuri,alootikki,rajkachori,katorichaat,samosachaat,dahikabab,dahi bhalla.">
+	<meta property="og:url" content="http://www.chaatbox.com/">
+	<meta property="og:publisher" content="https://www.facebook.com/chaatbox">
+	<meta name="keywords" content="chaat,online chaat,chaat in bangalore,online chaat in india,spicy chaat,bangalore chaat,samosa in bangalore,online samosa in bangalore,paani puri in bangalore,online paanipuri in bangalore,chaatbox,tasty chaat in bangalore,dail a chaat,chaattokri,chaat wala,awesome chaat in bangalore,chaat for us,kadugodi chaat delivery,chaat delivery in whitefiels,chaat delivery in bnagalore,chaat delivery in india" />
 </head>
 <body class="food-background" onload="timings();">
-  <div class="overlay">
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
+	<div class="overlay">
+		<div id="fb-root"></div>
+		<%= render '/layouts/header' %>
+		<%= yield %>
+		<%= render '/layouts/footer' %>
+	<div>
+
+	<script>(function(d, s, id) 
+	{
 		var js, fjs = d.getElementsByTagName(s)[0];
 		if (d.getElementById(id)) return;
 		js = d.createElement(s); js.id = id;
 		js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
 		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	<%= render '/layouts/header' %>
-	<%= yield %>
-	<%= render '/layouts/footer' %>
-  <div>
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-64155768-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </body>
 </html>
