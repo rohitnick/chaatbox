@@ -50,4 +50,9 @@ margin-top:15px;
 .font-18 {
   font-size: 18px;
 }
-
+.margin-right{
+margin-right:15px;
+}
+.margin-left{
+margin-left:20px;
+}

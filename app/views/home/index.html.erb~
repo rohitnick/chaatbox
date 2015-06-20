@@ -87,7 +87,7 @@
         <center class="dotted-bottom-border white">
            Order Total : &#8377<span id="total">0</span>
          </center>
-         <h6 class="white">*inclusive of delivery and packing charges</h6> 
+         <center><h6 class="white">*inclusive of delivery and packing charges</h6></center> 
          </div>
          <!-- End Order Summary -->
          <div class="finish-message display-none white">
