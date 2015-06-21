@@ -4,7 +4,7 @@
     <center><h5 class="white">Early bird 10 % discount on all orders above Rs 100. </h5></center>
     <div class="row">
       <% @products.each do |product| %>
-      <div class="col-md-3 col-sm-6 padding-5">
+      <div class="col-md-3 col-sm-6 padding-5" style="cursor: pointer;">
         <div class="well well-sm bg-white product js-product" id="<%=product.id%>" >
           <%= image_tag(product.image_url, :width => 230 , :height => 160) %>
           <h4 class="js-product-name item-name"><%= product.name %></h4>
