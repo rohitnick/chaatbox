@@ -28,6 +28,7 @@ $(document).ready(function(){
     var m=document.getElementById("mobile-input").value;
     var e=document.getElementById("email-input").value;
     var a=document.getElementById("address-input").value;
+    var q = $('#area :selected').text();
     $(".confirmtotal").html("Your order Total is &#8377 " + t);
     $(".discounttotal").html("You have to pay  &#8377 " + t1 + "" + "&nbsp after discount.");
     $(".confirmdetails").html("<b>Name:&nbsp</b>" + "<br>" + n + "<br><br>" +"<b>Mobile:&nbsp</b>" + "<br>" + m + "<br><br>" + "<b>Email:&nbsp</b>" + "<br>" +  e + "<br>");
@@ -36,7 +37,7 @@ $(document).ready(function(){
       type: "POST",
       url: 'create',
       dataType: 'json',
-      data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,customers_email_address: e,order_total: t,product: y,quantity: z}})
+      data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,customers_email_address: e,order_total: t,deliveryarea: q,product: y,quantity: z}})
     });
   });
 });
