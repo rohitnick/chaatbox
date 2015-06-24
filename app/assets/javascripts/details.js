@@ -21,6 +21,10 @@ $(document).ready(function(){
       $("#confirmname").append((i-(-1)) + "." + y[i] + "<br>");
       $("#confirmquantity").append(z[i] + "<br>");
     }
+    var date=new Date();
+    var hour=date.getHours();
+    var minute=date.getMinutes();
+    var time=hour + ":" + minute;
     var n=document.getElementById("name-input").value;
     var t=$('#total').html();
     var t1=(($('#total').html())-($('#total').html())/10);
@@ -37,7 +41,7 @@ $(document).ready(function(){
       type: "POST",
       url: 'create',
       dataType: 'json',
-      data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,customers_email_address: e,order_total: t,product: y,quantity: z}})
+      data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,customers_email_address: e,order_total: t,deliveryarea: q,time: time,product: y,quantity: z}})
     });
   });
 });
