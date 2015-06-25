@@ -39,4 +39,33 @@ RailsAdmin.config do |config|
     config.current_user_method(&:current_user)
   end
 
+  config.model 'Order' do
+    list do
+      field :id
+      field :created_at do
+        date_format :short
+      end
+      field :customers_name do
+        label 'Name'
+      end
+      field :customers_telephone do
+        label 'Phone'
+      end
+      field :customers_street_address do
+        label 'Address'
+      end
+      field :order_total do 
+        label 'Total'
+      end
+      field :line_items do
+        pretty_value do
+          value.pluck(:product_id, :quantity)
+        end
+      end
+      field :customers_email_address do
+        label 'Email'
+      end
+    end
+  end
+
 end
