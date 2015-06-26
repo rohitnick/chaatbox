@@ -1,6 +1,7 @@
 <div class="row container-fluid">
   <div class="col-md-9">
-    <center><h5 class="white">Early bird 10 % discount on all orders above Rs 100. </h5></center>
+    <center>
+      <h5 class="white">OFFER : 10% discount on all orders above Rs 100. </h5></center>
     <div class="row">
       <% @products.each do |product| %>
       <div class="col-md-3 col-sm-6 padding-5" style="cursor: pointer;">
@@ -16,73 +17,73 @@
     </div>
   </div>
   <div class="col-md-3">
-  <br>
-<br>
-   <div class="well well-sm bg-transparent font-18">
+    <br>
+    <br>
+    <div class="well well-sm bg-transparent font-18">
 
 
-    <div class="details display-none">
-      <center><h3 class="white">Delivery Details</h3></center>
-      <hr>
-      <form id ="details" class="form-horizontal">
-        <div class="form-group">
+      <div class="details display-none">
+        <center><h3 class="white">Delivery Details</h3></center>
+        <hr>
+        <form id ="details" class="form-horizontal">
+          <div class="form-group">
 
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="name-input" name="name" placeholder="First & Last Name" required="true" value="">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" id="name-input" name="name" placeholder="First & Last Name" required="true" value="">
+            </div>
           </div>
-        </div>
-        <div class="form-group">
+          <div class="form-group">
 
-          <div class="col-sm-12">
-            <input type="integer" class="form-control" id="mobile-input"  pattern="[7-9]{1}\d{9}" name="mobile" size="10" placeholder="Mobile Number"  required="true"  value="">
+            <div class="col-sm-12">
+              <input type="integer" class="form-control" id="mobile-input"  pattern="[7-9]{1}\d{9}" name="mobile" size="10" placeholder="Mobile Number"  required="true"  value="">
+            </div>
+          </div> 
+          <div class="form-group">
+
+            <div class="col-sm-12">
+              <input type="email" class="form-control" id="email-input" name="email" placeholder="example@domain.com"  required="true"  value="">
+            </div>
           </div>
-        </div> 
-        <div class="form-group">
+          <div class="form-group">
 
-          <div class="col-sm-12">
-            <input type="email" class="form-control" id="email-input" name="email" placeholder="example@domain.com"  required="true"  value="">
+            <div class="col-sm-12">
+              <textarea id="address-input" class="form-control" rows="4" name="address"  placeholder="Address"  required="true" ></textarea>
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-
-          <div class="col-sm-12">
-            <textarea id="address-input" class="form-control" rows="4" name="address"  placeholder="Address"  required="true" ></textarea>
+          <div class="form-group">
+            <div class="col-sm-8 col-sm-offset-3">
+              <input id="finish" name="submit" type="submit"  value="Confirm Order" class="btn btn-success">
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-8 col-sm-offset-3">
-            <input id="finish" name="submit" type="submit"  value="Confirm Order" class="btn btn-success">
+          <div class="form-group hide">
+            <div class="col-sm-8 col-sm-offset-3">
+              <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-success">
+            </div>
           </div>
-        </div>
-        <div class="form-group hide">
-          <div class="col-sm-8 col-sm-offset-3">
-            <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-success">
-          </div>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
 
 
 
 
-    <div class="text-center subarea display-none">
-      <label class="text-center"><span class="white">Delivery SubArea</span><br>
-        <br>
-        <center>
-                <select required="" id="area">
-                   <option >Kadugodi,Bangalore</option>
-                   <option >Kannamangla,Bangalore</option> 
-                   <option >Seegehalli,Bangalore</option> 
-                </select>
-        </center>
-        <span class="white"> <small>Delivery restricted to this subarea</small></span><br>
-        <span class="white"><h5>Order Timing 11:00 am to 10:00 pm</h5></span>
-        <br>
-        <h5 id="time" class="white"></h5>
-        <br>
-        <br>
-      </label>
-      <div class="row">
+      <div class="text-center subarea display-none">
+        <label class="text-center"><span class="white">Delivery SubArea</span><br>
+          <br>
+          <center>
+            <select required="" id="area">
+             <option >Kadugodi,Bangalore</option>
+             <option >Kannamangla,Bangalore</option> 
+             <option >Seegehalli,Bangalore</option> 
+           </select>
+         </center>
+         <span class="white"> <small>Delivery restricted to this subarea</small></span><br>
+         <span class="white"><h5>Order Timing 11:00 am to 10:00 pm</h5></span>
+         <br>
+         <h5 id="time" class="white"></h5>
+         <br>
+         <br>
+       </label>
+       <div class="row">
         <div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
           <button id="delivery" class="btn btn-success"> Proceed </button>
         </div>
@@ -143,7 +144,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <i><h3 class="modal-title text-center" id="confirmLabel">Thanks For Ordering</h3></i>
+        <i><h3 class="modal-title text-center" id="confirmLabel">Thank You For Ordering</h3></i>
       </div>
       <div class="modal-body">
         <div class="row">
@@ -155,6 +156,9 @@
             <div class=" col-sm-12">
               <i><h4 class="discounttotal"></h4></i>
             </div>
+            <div class="col-sm-12 ">
+              <i><h4 class="red">**We will deliver within 40 minutes**</h4></i>
+            </div>
           </div>
           <div class="col-sm-4">
             <%= image_tag "deliveryboy.png",class:"bg-transparent",width:"140",height:"140" %>
@@ -162,9 +166,7 @@
         </div>
         <br>
         <div class="row">
-          <div class="col-sm-12 text-center">
-            <i><h4 class="red">***Order will be at your doorstep within 40 minutes***</h4></i>
-          </div>
+
           <div class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
             <p class="fb-like" data-href="https://www.facebook.com/chaatbox" data-layout="standard" data-action="like" data-show-faces="true" data-share="true">
             </p>
