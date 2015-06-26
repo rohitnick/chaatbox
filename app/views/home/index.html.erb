@@ -29,25 +29,25 @@
           <div class="form-group">
 
             <div class="col-sm-12">
-              <input type="text" class="form-control" id="name-input" name="name" placeholder="First & Last Name" required="true" value="">
+              <input type="text" class="form-control" id="name-input" name="name" placeholder="Full Name" required="true" value="">
             </div>
           </div>
           <div class="form-group">
 
             <div class="col-sm-12">
-              <input type="integer" class="form-control" id="mobile-input"  pattern="[7-9]{1}\d{9}" name="mobile" size="10" placeholder="Mobile Number"  required="true"  value="">
+              <input type="integer" class="form-control" id="mobile-input"  pattern="[7-9]{1}\d{9}" name="mobile" size="10" placeholder="10 Digit Mobile Number"  required="true"  value="">
             </div>
           </div> 
           <div class="form-group">
 
             <div class="col-sm-12">
-              <input type="email" class="form-control" id="email-input" name="email" placeholder="example@domain.com"  required="true"  value="">
+              <input type="email" class="form-control" id="email-input" name="email" placeholder="Your Email"  required="false"  value="">
             </div>
           </div>
           <div class="form-group">
 
             <div class="col-sm-12">
-              <textarea id="address-input" class="form-control" rows="4" name="address"  placeholder="Address"  required="true" ></textarea>
+              <textarea id="address-input" class="form-control" rows="4" name="address"  placeholder="Address For Delivery"  required="true" ></textarea>
             </div>
           </div>
           <div class="form-group">
@@ -67,7 +67,7 @@
 
 
       <div class="text-center subarea display-none">
-        <label class="text-center"><span class="white">Delivery SubArea</span><br>
+        <label class="text-center"><span class="white">Please select an area for delivery</span><br>
           <br>
           <center>
             <select required="" id="area">
@@ -76,7 +76,7 @@
              <option >Seegehalli,Bangalore</option> 
            </select>
          </center>
-         <span class="white"> <small>Delivery restricted to this subarea</small></span><br>
+         <br>
          <span class="white"><h5>Order Timing 11:00 am to 10:00 pm</h5></span>
          <br>
          <h5 id="time" class="white"></h5>
@@ -107,8 +107,8 @@
 
 </div>
 <center>
-  <button disabled="disabled" class="btn btn-success js-proceed">SOLD OUT</button>
-  <p class="white">All our chaatboxes are sold out for today. Please check us back tomorrow and we will definitely have them available for you. </p>
+  <button class="btn btn-success js-proceed"> Proceed </button>
+  <!-- <p class="white">All our chaatboxes are sold out for today. Please check us back tomorrow and we will definitely have them available for you. </p> -->
 </center>
 <h4 class="please-select text-center red"></h4>
 <h4 id="minorder" class="white display-none text-center">**Minimum order amount is &#8377 60**</h4>
