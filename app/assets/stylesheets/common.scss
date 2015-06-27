@@ -1,6 +1,10 @@
 .food-background {
-	background-image: image-url(food-background);
-	background-repeat: repeat;
+	background-image: image-url(aloo-background);
+  // background-repeat: no-repeat;
+  min-height: 100%;
+  min-width: 100%;
+  background-size: 100%;
+  padding: 0px;
 }
 .bg-white{
   background-color:#ffffff !important;
