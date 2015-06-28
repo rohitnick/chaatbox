@@ -60,6 +60,11 @@
               <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-success">
             </div>
           </div>
+           <div class="form-group hide">
+            <div class="col-sm-8 col-sm-offset-3">
+              <input id="errorss" name="submit" type="button" data-toggle="modal" data-target="#errorinorder" value="Error message" class="btn btn-success">
+            </div>
+          </div>
         </form>
       </div>
 
@@ -173,6 +178,35 @@
             <p class="fb-like" data-href="https://www.facebook.com/chaatbox" data-layout="standard" data-action="like" data-show-faces="true" data-share="true">
             </p>
           </div>
+          <div class="col-sm-2 col-sm-offset-5">
+            <form action="https://www.chaatbox.com/" method="get">
+              <button class="btn btn-danger float-right margin-right">Close</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="modal" id="errorinorder" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i><h3 class="modal-title text-center" id="confirmLabel">Sorry!!....Please try to order again</h3></i>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+         <div class="col-sm-2 col-sm-offset-4">
+            <%= image_tag "sorry.jpg",class:"bg-transparent",width:"140",height:"140" %>
+         </div>
+    <br>
+    <br>
           <div class="col-sm-2 col-sm-offset-5">
             <form action="https://www.chaatbox.com/" method="get">
               <button class="btn btn-danger float-right margin-right">Close</button>

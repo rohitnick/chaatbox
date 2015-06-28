@@ -49,7 +49,7 @@ $(document).ready(function(){
 },
 error: function ()
 {
-alert("Sorry!..Please try to place order again");
+("#errorss").click();
 }
     });
   });
