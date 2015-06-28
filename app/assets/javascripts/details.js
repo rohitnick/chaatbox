@@ -46,6 +46,10 @@ $(document).ready(function(){
       success: function ()
 {
  $('#hmm').click();
+},
+error: function ()
+{
+alert("Sorry!..Please try to place order again");
 }
     });
   });
