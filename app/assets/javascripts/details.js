@@ -47,9 +47,9 @@ $(document).ready(function(){
 {
  $('#hmm').click();
 },
-error: function ()
+      error: function ()
 {
-alert("ewsdsdfdsf");
+ $('#errorss').click();
 }
     });
   });
