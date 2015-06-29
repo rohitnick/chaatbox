@@ -34,8 +34,11 @@ $(document).ready(function(){
     var a=document.getElementById("address-input").value;
     var q = $('#area :selected').text();
     $(".confirmtotal").html("Your order Total is &#8377 " + t);
+if(t >= 100)
+{
     $(".discounttotal").html("You have to pay  &#8377 " + t1 + "" + "&nbsp after discount.");
-    $(".confirmdetails").html("<b>Name:&nbsp</b>" + "<br>" + n + "<br><br>" +"<b>Mobile:&nbsp</b>" + "<br>" + m + "<br><br>" + "<b>Email:&nbsp</b>" + "<br>" +  e + "<br>");
+}    
+$(".confirmdetails").html("<b>Name:&nbsp</b>" + "<br>" + n + "<br><br>" +"<b>Mobile:&nbsp</b>" + "<br>" + m + "<br><br>" + "<b>Email:&nbsp</b>" + "<br>" +  e + "<br>");
     $(".confirmaddress").html("<b>Address:&nbsp</b>" + "<br>" +  a)
     $.ajax({
       type: "POST",
