@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('#details').submit(function(e){
     e.preventDefault();
-    $('#hmm').click();
+   
     $(".details").slideUp();
     var x=''; var q='';
     $('.line-item').each(function(i)
@@ -41,7 +41,16 @@ $(document).ready(function(){
       type: "POST",
       url: 'create',
       dataType: 'json',
-      data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,customers_email_address: e,order_total: t,deliveryarea: q,time: time,product: y,quantity: z}})
+      data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,
+                     customers_email_address: e,order_total: t,deliveryarea: q,time: time,product: y,quantity: z}}),
+      success: function ()
+{
+ $('#hmm').click();
+},
+      error: function ()
+{
+ $('#errorss').click();
+}
     });
   });
 });
