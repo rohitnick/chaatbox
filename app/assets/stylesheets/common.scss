@@ -1,6 +1,6 @@
 .food-background {
 	background-image: image-url(aloo-background);
-  // background-repeat: no-repeat;
+  //background-repeat: no-repeat;
   min-height: 100%;
   min-width: 100%;
   background-size: 100%;
@@ -59,4 +59,21 @@ margin-right:15px;
 }
 .margin-left{
 margin-left:5px;
+}
+
+
+
+footer {
+    background-color: #000;
+    padding: 40px 0px 0px;
+    border-top: 5px solid #333;
+    display: block;
+}
+
+
+.footer-note p {
+    margin-bottom: 0px;
+}
+footer p {
+    color: #D1D3D4;
 }
