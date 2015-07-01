@@ -1,5 +1,6 @@
 .food-background {
 	background-image: image-url(aloo-background);
+   position:relative;
   //background-repeat: no-repeat;
   min-height: 100%;
   min-width: 100%;
@@ -50,6 +51,10 @@ margin-top:15px;
 {
   color: white !important;
 }
+.black
+{
+  color: black !important;
+}
 
 .font-18 {
   font-size: 18px;
@@ -60,8 +65,13 @@ margin-right:15px;
 .margin-left{
 margin-left:5px;
 }
+.margin-lef{
+margin-left:2px;
+}
 
-
+.about {
+	background-image: image-url(about);
+}
 
 footer {
     background-color: #000;
@@ -76,4 +86,8 @@ footer {
 }
 footer p {
     color: #D1D3D4;
+}
+
+.gallery {
+   background-color: #fff ;
 }
