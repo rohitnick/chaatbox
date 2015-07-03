@@ -34,7 +34,7 @@ $(document).ready(function(){
     var a=document.getElementById("address-input").value;
     var q = $('#area :selected').text();
     $(".confirmtotal").html("Your order Total is &#8377 " + t);
-if(t >= 100)
+if(t >= 200)
 {
     $(".discounttotal").html("You have to pay  &#8377 " + t1 + "" + "&nbsp after discount.");
 }    

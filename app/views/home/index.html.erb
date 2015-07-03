@@ -1,13 +1,10 @@
-<br>
-<br>
-<br>
 <div class="row container-fluid">
   <div class="col-md-9">
     <center>
-      <h5 class="white">OFFER : 10% discount on all orders above Rs 100. </h5></center>
+      <h5 class="white">OFFER : 10% discount on all orders above Rs 200. </h5></center>
     <div class="row">
       <% @products.each do |product| %>
-      <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>">
+      <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>"">
         <%= image_tag(product.image_url, :width => '100%' , :height => 160, :class => "product-image")%>
         <div class="well well-sm bg-white product-details js-product-details" >
           <h4 class="js-product-name item-name"><%= product.name %></h4>
@@ -41,18 +38,57 @@
               <input type="integer" class="form-control" id="mobile-input"  pattern="[7-9]{1}\d{9}" name="mobile" size="10" placeholder="10 Digit Mobile Number"  required="true"  value="">
             </div>
           </div> 
-          <div class="form-group">
+         
+ <div class="form-group">
 
             <div class="col-sm-12">
               <input type="email" class="form-control" id="email-input" name="email" placeholder="Your Email"  required="false"  value="">
             </div>
           </div>
+
+
           <div class="form-group">
 
             <div class="col-sm-12">
               <textarea id="address-input" class="form-control" rows="4" name="address"  placeholder="Address For Delivery"  required="true" ></textarea>
             </div>
           </div>
+
+<!-- <div class="form-group">
+<div class="col-md-12">
+<p class="white margin-left">At what time do you want delivery <span class="tomorrow">tomorrow</span>?</p>
+</div>
+
+<div class="col-md-6 check">
+<input id="checkbox" type="checkbox" /><small class="white">Instant Delivery</small>
+</div>
+            <div class="col-sm-2">
+<select required="" id="hour">
+             <option id="hournull">--</option>
+             <option id="hour11">11</option> 
+               <option id="hour12">12</option> 
+             <option id="hour13">13</option> 
+             <option id="hour14">14</option>
+             <option id="hour15">15</option> 
+             <option id="hour16">16</option> 
+             <option id="hour17">17</option> 
+               <option id="hour18">18</option> 
+             <option id="hour19">19</option> 
+             <option id="hour20">20</option>
+             <option id="hour21">21</option> 
+              
+           </select>
+            </div>
+ <div class="col-sm-2">
+<select required="" id="minute">
+                <option id="minnull">--</option>
+               <option id="min00">00</option> 
+             <option id="min15">15</option> 
+             <option id="min30">30</option>
+             <option id="min45">45</option>
+           </select>
+            </div>
+          </div> -->
           <div class="form-group">
             <div class="col-sm-8 col-sm-offset-3">
               <input id="finish" name="submit" type="submit"  value="Confirm Order" class="btn btn-success">
@@ -61,6 +97,11 @@
           <div class="form-group hide">
             <div class="col-sm-8 col-sm-offset-3">
               <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-success">
+            </div>
+          </div>
+     <div class="form-group hide">
+            <div class="col-sm-8 col-sm-offset-3">
+              <p id="errorfortime" class="white">The selected delivery time should be at least 45 minutes from the time of order</p>
             </div>
           </div>
            <div class="form-group hide">
@@ -77,9 +118,15 @@
           <br>
           <center>
             <select required="" id="area">
+             <option >Hope Farm,Bangalore</option> 
+             <option >ITPL Main Road,Bangalore</option> 
              <option >Kadugodi,Bangalore</option>
              <option >Kannamangla,Bangalore</option> 
+             <option >Prasantha Extension,Bangalore</option> 
              <option >Seegehalli,Bangalore</option> 
+            
+
+
            </select>
          </center>
          <br>
@@ -153,104 +200,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<div class="container-fluid gallery">
-<div class="row gallery">
-            <div class="col-lg-12">
- <br>
-               <center><h2><i>Fresh and Hygienic packing is our motto</i></h2><center> 
-          <br>
-<br>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="#">
-                   <%= image_tag('paanipuri.jpg',:class => "img-circle",:width => '300',:height => '200') %>
-                </a>
-            </div>
-<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="#">
-                   <%= image_tag('dahikabab.jpg',:class => "img-circle",:width => '300',:height => '200') %>
-                </a>
-            </div>
-<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="#">
-                   <%= image_tag('dahibhalla.jpg',:class => "img-circle",:width => '300',:height => '200') %>
-                </a>
-            </div>
-<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="#">
-                   <%= image_tag('alootikki.jpg',:class => "img-circle",:width => '300',:height => '200') %>
-                </a>
-            </div>
-<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="#">
-                   <%= image_tag('katorichaat.jpg',:class => "img-circle",:width => '300',:height => '200') %>
-                </a>
-            </div>
-<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="#">
-                   <%= image_tag('paprichaat.jpg',:class => "img-circle",:width => '300',:height => '200') %>
-                </a>
-            </div>
-<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="#">
-                   <%= image_tag('samosas.jpg',:class => "img-circle",:width => '300',:height => '200') %>
-                </a>
-            </div>
-<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="#">
-                   <%= image_tag('samosachaat.jpg',:class => "img-circle",:width => '300',:height => '200') %>
-                </a>
-            </div>
-            </div>
-        </div>
-</div>
-
-
-
-<section class="about tex-center white" id="about">
-				<div class="container">
-					<div class="heading text-center">
-						<%= image_tag 'logo.png',width:200,height: '43' %>
- <br>
- <br>
-						<p class="white">A little bit about ourselves</p>
-					</div>
-					<div class="about-content">
-						<p>The Granny around the corner say’s the word thindipotha originally meant “someone who likes to eat good food”. 
-						Overtime the word has lost its meaning, these days it refers to someone who just eats whatever they can. 
-						we want to make the word thindipotha synonymous with the word HEALTHY as it was originally meant to be.
-						</p>
-					</div>
-<br>
-<br>
-<hr>
-
-					<div class="process text-center">
-						<div class="col-md-4">
-							<%= image_tag 'touch.png' %>
-							<h3>You place an order</h3>
-							<p>You can place an order by calling 76767-65432</p>
-						</div>
-						<div class="col-md-4">
-							<%= image_tag 'cook.png' %>
-							<h3>Prepared and packed</h3>
-							<p>Our awesome chef carefully pack's your order to perfection</p>
-						</div>
-						<div class="col-md-4">
-							<%= image_tag '30min.png' %>
-							<h3>Happiness Delivered!</h3>
-							<p>Delivered to doorstep for free so that you can dwell over it's awesomeness</p>  
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-<br>
-<br>
-				</div>
-			</section>
-
-
 
 
 <div class="modal" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
@@ -319,12 +268,57 @@
   </div>
 </div>
 
-<div class="modal" id="gallery" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        
+<div class="modal" id="howitworks" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
+ 
+      <div class="container">
+     
+<button type="button" class="close white font-18 margin-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+
+<section class="about" id="about">
+				<div class="white text-center">
+					<div class="white heading">
+<br>
+
+						<h2><b>How it works?</b></h2>
+						
+					</div>
+					<div class="about-content grey col-md-10 col-md-offset-1">
+						<h4>We love Chaat!!! And so does everyone else. We are here to make sure you get the mouthwatering taste of the best Chaat in Bangalore <b>RIGHT AT YOUR HOME</b>! You heard us! So have fun while you make and taste the best Chaat with your loved ones! And do let us know of the awesome experience. We’ll be waiting to hear from you <span class="fa fa-smile-o"></span><br>
+<br>
+
+						</h4>
+					</div>
+					<div class="process">
+<br>
+						<div class="col-md-3">
+							<%= image_tag 'touch.png',height: '100' %>
+							<h5>You place an order</h5>
+							<p class="grey"><small>You place an order on our website or by calling @ +919595404709. <br>PS: We love you for doing that!</small></p>
+						</div>
+						<div class="col-md-3">
+							<%= image_tag 'cook.png',height: '100' %>
+							<h5>Prepared, Packed & Delivered within 45 minutes!</h5>
+							<p class="grey"><small>Our awesome chefs carefully prepare & pack your order in the amazing Chaatboxes while we make sure the order reaches you hot & yummy</small></p>
+						</div>
+						<div class="col-md-3">
+							<%= image_tag 'mixture.png',height: '100' %>
+							<h5>You are our favorite cook!</h5>
+							<p class="grey"><small>Have fun using the Recipe Card that comes with the box & do your magic!</small></p>  
+						</div>
+                                                <div class="col-md-3">
+							<%= image_tag 'final.png',height: '100' %>
+							<h5>Yum!</h5>
+							<p class="grey"><small>It’s about time, sit with your loved ones while you eat your yummy, tasty & delicious Chaat! We hope to serve you again soon. ☺ </small></p>  
+						</div>
+                                                
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</section>
+
+
+
       </div>
-    </div>
-  </div>
+ 
 </div>
