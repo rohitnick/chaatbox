@@ -1,8 +1,13 @@
 <div class="row container-fluid">
   <div class="col-md-9">
-    <center>
-      <h4 class="white"><b>OFFERS : 10% discount on all orders above Rs 200 &
-                        One lucky customer gets a FREE MEAL everyday!! </b> </h4></center>
+     <div class="row">
+<div class="col-md-11">
+<p class="white"><b>Share your love for Chaatbox on Facebook with #Chaatbox tag to get a 30% DISCOUNT on your order of Rs.200 or more!!!</b></p>
+</div>
+<div class="col-md-1">
+<a><div class="fb-share-button" data-href="http://chaatbox.com" data-layout="button_count"></div></a>
+</div>
+</div>
     <div class="row">
       <% @products.each do |product| %>
       <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>"">
