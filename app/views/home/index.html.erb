@@ -1,8 +1,13 @@
 <div class="row container-fluid">
   <div class="col-md-9">
-    <center>
-      <h4 class="white"><b>OFFERS : 10% discount on all orders above Rs 200 &
-                        One lucky customer gets a FREE MEAL everyday!! </b> </h4></center>
+     <div class="row">
+<div class="col-md-11">
+<p class="white"><b>Share your love for Chaatbox on Facebook with #Chaatbox tag to get a 30% DISCOUNT on your order of Rs.200 or more!!!</b></p>
+</div>
+<div class="col-md-1">
+<a><div class="fb-share-button" data-href="http://chaatbox.com" data-layout="button_count"></div></a>
+</div>
+</div>
     <div class="row">
       <% @products.each do |product| %>
       <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>"">
@@ -54,42 +59,6 @@
               <textarea id="address-input" class="form-control" rows="4" name="address"  placeholder="Address For Delivery"  required="true" ></textarea>
             </div>
           </div>
-
-<!-- <div class="form-group">
-<div class="col-md-12">
-<p class="white margin-left">At what time do you want delivery <span class="tomorrow">tomorrow</span>?</p>
-</div>
-
-<div class="col-md-6 check">
-<input id="checkbox" type="checkbox" /><small class="white">Instant Delivery</small>
-</div>
-            <div class="col-sm-2">
-<select required="" id="hour">
-             <option id="hournull">--</option>
-             <option id="hour11">11</option> 
-               <option id="hour12">12</option> 
-             <option id="hour13">13</option> 
-             <option id="hour14">14</option>
-             <option id="hour15">15</option> 
-             <option id="hour16">16</option> 
-             <option id="hour17">17</option> 
-               <option id="hour18">18</option> 
-             <option id="hour19">19</option> 
-             <option id="hour20">20</option>
-             <option id="hour21">21</option> 
-              
-           </select>
-            </div>
- <div class="col-sm-2">
-<select required="" id="minute">
-                <option id="minnull">--</option>
-               <option id="min00">00</option> 
-             <option id="min15">15</option> 
-             <option id="min30">30</option>
-             <option id="min45">45</option>
-           </select>
-            </div>
-          </div> -->
           <div class="form-group">
             <div class="col-sm-8 col-sm-offset-3">
               <input id="finish" name="submit" type="submit"  value="Confirm Order" class="btn btn-success">
@@ -98,11 +67,6 @@
           <div class="form-group hide">
             <div class="col-sm-8 col-sm-offset-3">
               <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-success">
-            </div>
-          </div>
-     <div class="form-group hide">
-            <div class="col-sm-8 col-sm-offset-3">
-              <p id="errorfortime" class="white">The selected delivery time should be at least 45 minutes from the time of order</p>
             </div>
           </div>
            <div class="form-group hide">
@@ -119,15 +83,12 @@
           <br>
           <center>
             <select required="" id="area">
-             <option >Hope Farm,Bangalore</option> 
-             <option >ITPL Main Road,Bangalore</option> 
-             <option >Kadugodi,Bangalore</option>
-             <option >Kannamangla,Bangalore</option> 
-             <option >Prasantha Extension,Bangalore</option> 
-             <option >Seegehalli,Bangalore</option> 
-            
-
-
+             <option style="font-size:10">Hope Farm,Bangalore</option> 
+             <option style="font-size:10">ITPL Main Road,Bangalore</option> 
+             <option style="font-size:10">Kadugodi,Bangalore</option>
+             <option style="font-size:10">Kannamangla,Bangalore</option> 
+             <option style="font-size:10">Prasantha Extension,Bangalore</option> 
+             <option style="font-size:10">Seegehalli,Bangalore</option> 
            </select>
          </center>
          <br>
@@ -196,11 +157,6 @@
 </div>
 </div>
 </div>
-
-
-<br>
-<br>
-<br>
 
 
 <div class="modal" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
