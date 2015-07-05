@@ -35,13 +35,9 @@
 	border-bottom-width: 1px;
 }
 #tnc-button {
-  position: fixed;
-  bottom: 0px;
-  right: 5px;
-  font-size: 14px;
-  background-color: #EF3E3A;
-  padding: 10px;
-  color: white;
+
+
+color: white;
 }
 ul.navbar-right.nav li {
 	font-size: 16px;
@@ -50,8 +46,5 @@ ul.navbar-right.nav li {
   background-color: rgba(0, 0, 0, 0.3);
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
   height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 100%;
 }

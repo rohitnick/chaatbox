@@ -1,10 +1,16 @@
 <div class="row container-fluid">
   <div class="col-md-9">
-    <center>
-      <h5 class="white">OFFER : 10% discount on all orders above Rs 100. </h5></center>
+     <div class="row">
+<div class="col-md-11">
+<p class="white"><b>Share your love for Chaatbox on Facebook with #Chaatbox tag to get a 30% DISCOUNT on your order of Rs.200 or more!!!</b></p>
+</div>
+<div class="col-md-1">
+<a><div class="fb-share-button" data-href="http://chaatbox.com" data-layout="button_count"></div></a>
+</div>
+</div>
     <div class="row">
       <% @products.each do |product| %>
-      <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>">
+      <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>"">
         <%= image_tag(product.image_url, :width => '100%' , :height => 160, :class => "product-image")%>
         <div class="well well-sm bg-white product-details js-product-details" >
           <h4 class="js-product-name item-name"><%= product.name %></h4>
@@ -38,12 +44,15 @@
               <input type="integer" class="form-control" id="mobile-input"  pattern="[7-9]{1}\d{9}" name="mobile" size="10" placeholder="10 Digit Mobile Number"  required="true"  value="">
             </div>
           </div> 
-          <div class="form-group">
+         
+ <div class="form-group">
 
             <div class="col-sm-12">
               <input type="email" class="form-control" id="email-input" name="email" placeholder="Your Email"  required="false"  value="">
             </div>
           </div>
+
+
           <div class="form-group">
 
             <div class="col-sm-12">
@@ -74,9 +83,12 @@
           <br>
           <center>
             <select required="" id="area">
-             <option >Kadugodi,Bangalore</option>
-             <option >Kannamangla,Bangalore</option> 
-             <option >Seegehalli,Bangalore</option> 
+             <option style="font-size:10">Hope Farm,Bangalore</option> 
+             <option style="font-size:10">ITPL Main Road,Bangalore</option> 
+             <option style="font-size:10">Kadugodi,Bangalore</option>
+             <option style="font-size:10">Kannamangla,Bangalore</option> 
+             <option style="font-size:10">Prasantha Extension,Bangalore</option> 
+             <option style="font-size:10">Seegehalli,Bangalore</option> 
            </select>
          </center>
          <br>
@@ -211,4 +223,59 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="modal" id="howitworks" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
+ 
+      <div class="container">
+     
+<button type="button" class="close white font-18 margin-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+
+<section class="about" id="about">
+				<div class="white text-center">
+					<div class="white heading">
+<br>
+
+						<h2><b>How it works?</b></h2>
+						
+					</div>
+					<div class="about-content grey col-md-10 col-md-offset-1">
+						<h4>We love Chaat!!! And so does everyone else. We are here to make sure you get the mouthwatering taste of the best Chaat in Bangalore <b>RIGHT AT YOUR HOME</b>! You heard us! So have fun while you make and taste the best Chaat with your loved ones! And do let us know of the awesome experience. We’ll be waiting to hear from you <span class="fa fa-smile-o"></span><br>
+<br>
+
+						</h4>
+					</div>
+					<div class="process">
+<br>
+						<div class="col-md-3">
+							<%= image_tag 'touch.png',height: '100' %>
+							<h5>You place an order</h5>
+							<p class="grey"><small>You place an order on our website or by calling @ +919595404709. <br>PS: We love you for doing that!</small></p>
+						</div>
+						<div class="col-md-3">
+							<%= image_tag 'cook.png',height: '100' %>
+							<h5>Prepared, Packed & Delivered within 45 minutes!</h5>
+							<p class="grey"><small>Our awesome chefs carefully prepare & pack your order in the amazing Chaatboxes while we make sure the order reaches you hot & yummy</small></p>
+						</div>
+						<div class="col-md-3">
+							<%= image_tag 'mixture.png',height: '100' %>
+							<h5>You are our favorite cook!</h5>
+							<p class="grey"><small>Have fun using the Recipe Card that comes with the box & do your magic!</small></p>  
+						</div>
+                                                <div class="col-md-3">
+							<%= image_tag 'final.png',height: '100' %>
+							<h5>Yum!</h5>
+							<p class="grey"><small>It’s about time, sit with your loved ones while you eat your yummy, tasty & delicious Chaat! We hope to serve you again soon. ☺ </small></p>  
+						</div>
+                                                
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</section>
+
+
+
+      </div>
+ 
 </div>

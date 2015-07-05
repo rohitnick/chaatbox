@@ -1,6 +1,7 @@
 .food-background {
 	background-image: image-url(aloo-background);
-  // background-repeat: no-repeat;
+   position:relative;
+  //background-repeat: no-repeat;
   min-height: 100%;
   min-width: 100%;
   background-size: 100%;
@@ -50,6 +51,10 @@ margin-top:15px;
 {
   color: white !important;
 }
+.black
+{
+  color: black !important;
+}
 
 .font-18 {
   font-size: 18px;
@@ -59,4 +64,46 @@ margin-right:15px;
 }
 .margin-left{
 margin-left:5px;
+}
+.margin-lef{
+margin-left:2px;
+}
+.grey
+{
+color: #786969 ;
+}
+
+footer {
+    //background-image: image-url(footer);
+      background-color: #000;
+    padding: 40px 0px 0px;
+    //border-top: 5px solid #333;
+    display: block;
+}
+
+
+.footer-note p {
+    margin-bottom: 0px;
+}
+footer p {
+    color: #D1D3D4;
+}
+
+
+
+#about
+{
+background-color: #000;
+}
+
+#howitworks
+{
+
+positive:absolute;
+top:100px;
+}
+
+
+.heading {
+    font-family: 'Caliber';
 }
