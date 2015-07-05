@@ -1,8 +1,9 @@
 /*$(document).ready(function () {
 $(".tomorrow").hide();
-    var ckbox = $('#checkbox');
 $("#hournull").hide();
 $("#minnull").hide();
+    var ckbox = $('#checkbox');
+
     $('input').on('click',function () {
         if (ckbox.is(':checked')) {
             $("#hour").hide();

@@ -23,6 +23,9 @@ $(document).on "page:change", ->
       $("#mobile-input").val("");
       $("#email-input").val("");
       $("#address-input").val("");
+      $(".couponerror").hide();
+      $("#couponbox").hide();
+      $("#checkboxcoupon").prop('checked',false);
     else
       name = $(this).find('.js-product-name').html() 
       price = $(this).find('.js-product-price').html()
@@ -44,6 +47,9 @@ $(document).on "page:change", ->
       $("#name-input").val("");
       $("#mobile-input").val("");
       $("#email-input").val("");
-      $("#address-input").val("");    
+      $("#address-input").val("");
+      $(".couponerror").hide(); 
+      $("#couponbox").hide();   
+      $("#checkboxcoupon").prop('checked',false);
       return
   return

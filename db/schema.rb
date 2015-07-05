@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150629070921) do
+ActiveRecord::Schema.define(version: 20150704065931) do
 
   create_table "leavemessages", force: :cascade do |t|
     t.string   "name"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150629070921) do
     t.datetime "updated_at",               null: false
     t.string   "deliveryarea"
     t.string   "time"
+    t.string   "payableamount"
   end
 
   create_table "products", force: :cascade do |t|

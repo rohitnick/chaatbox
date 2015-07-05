@@ -15,6 +15,8 @@ $(document).ready(function(){
     var z=q.split('.');
     var length=z.length-2;
     z.splice(length,2);
+
+   
     var i;
     for (i=0;i<y.length;i++)
     {
@@ -29,23 +31,33 @@ $(document).ready(function(){
     var t=$('#total').html();
     var t1=(($('#total').html())-($('#total').html())/10);
     t1=Math.round(t1);
+    var t2=(($('#total').html())-($('#total').html())/5);
+    t2=Math.round(t2);
     var m=document.getElementById("mobile-input").value;
     var e=document.getElementById("email-input").value;
     var a=document.getElementById("address-input").value;
+    var coup=document.getElementById("couponbox").value;
+        coup=coup.toUpperCase();
+ var payable=t;
+    /*if(t>=200 && coup=="CBW20")
+     {
+    $(".discounttotal").html("You have to pay  &#8377 " + t2 + "" + "&nbsp after 20% discount.");
+    var payable=t2;
+     }*/
     var q = $('#area :selected').text();
     $(".confirmtotal").html("Your order Total is &#8377 " + t);
-if(t >= 200)
+/*if(t >= 200 && coup!="CBW20")
 {
-    $(".discounttotal").html("You have to pay  &#8377 " + t1 + "" + "&nbsp after discount.");
-}    
-$(".confirmdetails").html("<b>Name:&nbsp</b>" + "<br>" + n + "<br><br>" +"<b>Mobile:&nbsp</b>" + "<br>" + m + "<br><br>" + "<b>Email:&nbsp</b>" + "<br>" +  e + "<br>");
-    $(".confirmaddress").html("<b>Address:&nbsp</b>" + "<br>" +  a)
+    $(".discounttotal").html("You have to pay  &#8377 " + t1 + "" + "&nbsp after 10% discount.");
+     var payable=t1;
+}*/ 
+
     $.ajax({
       type: "POST",
       url: 'create',
       dataType: 'json',
       data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,
-                     customers_email_address: e,order_total: t,deliveryarea: q,time: time,product: y,quantity: z}}),
+                     customers_email_address: e,order_total: t,deliveryarea: q,time: time,payableamount: payable,product: y,quantity: z}}),
       success: function ()
 {
  $('#hmm').click();
