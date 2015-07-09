@@ -1,133 +1,131 @@
 <div class="row container-fluid">
   <div class="col-md-9">
-     <div class="row">
-<div class="col-md-11">
-<p class="white"><b>Share your love for Chaatbox on Facebook with #Chaatbox tag to get a 30% DISCOUNT on your order of Rs.200 or more!!!</b></p>
-</div>
-<div class="col-md-1">
-<a><div class="fb-share-button" data-href="http://chaatbox.com" data-layout="button_count"></div></a>
-</div>
-</div>
-    <div class="row">
-      <% @products.each do |product| %>
-      <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>"">
-        <%= image_tag(product.image_url, :width => '100%' , :height => 160, :class => "product-image")%>
-        <div class="well well-sm bg-white product-details js-product-details" >
-          <h4 class="js-product-name item-name"><%= product.name %></h4>
-          <small><%= product.title %></small>
-          <br>
-          <span class="item-price"> &#8377<i class="js-product-price"><%= product.price %> </i></span>
-        </div>
+   <div class="row">
+    <div class="col-md-11">
+      <center class="white"><b>Now get a FREE CHAATBOX on your first order ! &nbsp This one's on the House ! </b> <i class="fa fa-smile-o"> </i></center>
+    </div>
+
+  </div>
+  <div class="row">
+    <% @products.each do |product| %>
+    <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>"">
+      <%= image_tag(product.image_url, :width => '100%' , :height => 160, :class => "product-image")%>
+      <div class="well well-sm bg-white product-details js-product-details" >
+        <h4 class="js-product-name item-name"><%= product.name %></h4>
+        <small><%= product.title %></small>
+        <br>
+        <span class="item-price"> &#8377<i class="js-product-price"><%= product.price %> </i></span>
       </div>
-      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<div class="col-md-3">
+  <br>
+  <br>
+  <div class="well well-sm bg-transparent font-18">
+
+
+    <div class="details display-none">
+      <center class="dotted-bottom-border white"><h4>Delivery Details</h4></center>
+      <form id ="details" class="form-horizontal">
+        <div class="form-group margin-top-5">
+
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="name-input" name="name" placeholder="Full Name" required="true" value="">
+          </div>
+        </div>
+        <div class="form-group">
+
+          <div class="col-sm-12">
+            <input type="integer" class="form-control" id="mobile-input"  pattern="[7-9]{1}\d{9}" name="mobile" size="10" placeholder="10 Digit Mobile Number"  required="true"  value="">
+          </div>
+        </div> 
+        
+        <div class="form-group">
+
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="email-input" name="email" placeholder="Your Email"  required="false"  value="">
+          </div>
+        </div>
+
+
+        <div class="form-group">
+
+          <div class="col-sm-12">
+            <textarea id="address-input" class="form-control" rows="4" name="address"  placeholder="Address For Delivery"  required="true" ></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-8 col-sm-offset-3">
+            <input id="finish" name="submit" type="submit"  value="Confirm Order" class="btn btn-success">
+          </div>
+        </div>
+        <div class="form-group hide">
+          <div class="col-sm-8 col-sm-offset-3">
+            <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-success">
+          </div>
+        </div>
+        <div class="form-group hide">
+          <div class="col-sm-8 col-sm-offset-3">
+            <input id="errorss" name="submit" type="button" data-toggle="modal" data-target="#errorinorder" value="Error message" class="btn btn-success">
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="text-center subarea display-none">
+      <label class="text-center"><span class="white font-weight-normal">Please select an area for delivery</span>
+        <center>
+          <select required="" id="area" class="form-control margin-to-5">
+           <option style="font-size:10">Hope Farm,Bangalore</option> 
+           <option style="font-size:10">ITPL Main Road,Bangalore</option> 
+           <option style="font-size:10">Kadugodi,Bangalore</option>
+           <option style="font-size:10">Kannamangla,Bangalore</option> 
+           <option style="font-size:10">Prasantha Extension,Bangalore</option> 
+           <option style="font-size:10">Seegehalli,Bangalore</option> 
+         </select>
+       </center>
+
+       <span class="white"><h5>Order Timing 11:00 am to 10:00 pm</h5></span>
+       <h5 id="time" class="white"></h5>
+
+     </label>
+     <div class="row">
+
+      <div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+        <button id="delivery" class="btn btn-success"> Proceed </button>
+      </div>
     </div>
   </div>
-  <div class="col-md-3">
-    <br>
-    <br>
-    <div class="well well-sm bg-transparent font-18">
-
-
-      <div class="details display-none">
-        <center><h3 class="white">Delivery Details</h3></center>
-        <hr>
-        <form id ="details" class="form-horizontal">
-          <div class="form-group">
-
-            <div class="col-sm-12">
-              <input type="text" class="form-control" id="name-input" name="name" placeholder="Full Name" required="true" value="">
-            </div>
-          </div>
-          <div class="form-group">
-
-            <div class="col-sm-12">
-              <input type="integer" class="form-control" id="mobile-input"  pattern="[7-9]{1}\d{9}" name="mobile" size="10" placeholder="10 Digit Mobile Number"  required="true"  value="">
-            </div>
-          </div> 
-         
- <div class="form-group">
-
-            <div class="col-sm-12">
-              <input type="email" class="form-control" id="email-input" name="email" placeholder="Your Email"  required="false"  value="">
-            </div>
-          </div>
-
-
-          <div class="form-group">
-
-            <div class="col-sm-12">
-              <textarea id="address-input" class="form-control" rows="4" name="address"  placeholder="Address For Delivery"  required="true" ></textarea>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-8 col-sm-offset-3">
-              <input id="finish" name="submit" type="submit"  value="Confirm Order" class="btn btn-success">
-            </div>
-          </div>
-          <div class="form-group hide">
-            <div class="col-sm-8 col-sm-offset-3">
-              <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-success">
-            </div>
-          </div>
-           <div class="form-group hide">
-            <div class="col-sm-8 col-sm-offset-3">
-              <input id="errorss" name="submit" type="button" data-toggle="modal" data-target="#errorinorder" value="Error message" class="btn btn-success">
-            </div>
-          </div>
-        </form>
-      </div>
-
-
-      <div class="text-center subarea display-none">
-        <label class="text-center"><span class="white">Please select an area for delivery</span><br>
-          <br>
-          <center>
-            <select required="" id="area">
-             <option style="font-size:10">Hope Farm,Bangalore</option> 
-             <option style="font-size:10">ITPL Main Road,Bangalore</option> 
-             <option style="font-size:10">Kadugodi,Bangalore</option>
-             <option style="font-size:10">Kannamangla,Bangalore</option> 
-             <option style="font-size:10">Prasantha Extension,Bangalore</option> 
-             <option style="font-size:10">Seegehalli,Bangalore</option> 
-           </select>
-         </center>
-         <br>
-         <span class="white"><h5>Order Timing 11:00 am to 10:00 pm</h5></span>
-         <br>
-         <h5 id="time" class="white"></h5>
-         <br>
-         <br>
-       </label>
-       <div class="row">
-
-        <div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
-          <button id="delivery" class="btn btn-success"> Proceed </button>
-        </div>
-      </div>
-    </div>
-    <!-- End Delivery Details -->
-    <!-- Order Summary -->
-    <div id="line-items">
-      <center class="dotted-bottom-border white">
-       Order Total : &#8377<span id="total">0</span>
-     </center>
-     <center><h6 class="white">*inclusive of packaging and delivery charges</h6></center> 
-   </div>
-   <!-- End Order Summary -->
-   <div class="finish-message display-none white">
+  <!-- End Delivery Details -->
+  <!-- Order Summary -->
+  <div id="line-items">
+    <center class="dotted-bottom-border white">
+      Order Details
+    </center>
+  </div>
+  <!-- End Order Summary -->
+  <div class="finish-message display-none white">
     <h3 class="text-center"><i>Thanks For Ordering</i></h3>
     <br>
     <br>
     <h5 class="text-center">You Will Recieve order within 40 minutes </h5>
   </div>
+  <center>
+    <button class="btn btn-success js-proceed margin-top-5"> Proceed </button>
+    <!-- <p class="white">All our chaatboxes are sold out for today. Please check us back tomorrow and we will definitely have them available for you. </p> -->
+  </center>
+  <h4 class="please-select text-center red"></h4>
+  <h4 id="minorder" class="white display-none text-center">**Minimum order amount is &#8377 60**</h4>
 
 </div>
-<center>
-  <button class="btn btn-success js-proceed"> Proceed </button>
-  <!-- <p class="white">All our chaatboxes are sold out for today. Please check us back tomorrow and we will definitely have them available for you. </p> -->
-</center>
-<h4 class="please-select text-center red"></h4>
-<h4 id="minorder" class="white display-none text-center">**Minimum order amount is &#8377 60**</h4>
+<center class="white">
+  <h4>Payable Amount : &#8377<span id="total">0</span><h4>
+    <!-- <h6 class="white">*inclusive of packaging and delivery charges</h6> -->
+    <h6 class="white">*Free chaatbox offer amount will be deducted on delivery.</h6>
+  </center> 
 </div>
 
 
@@ -211,71 +209,67 @@
     <div class="modal-content">
       <div class="modal-body">
         <div class="row">
-       <i><h3 class="modal-title text-center" id="confirmLabel">Oops something went wrong,please try again</h3></i>
-    <br>
-    <br>
-          <div class="col-sm-2 col-sm-offset-5">
-            <form action="http://www.chaatbox.com/" method="get">
-              <button class="btn btn-danger float-right margin-right">Close</button>
-            </form>
-          </div>
+         <i><h3 class="modal-title text-center" id="confirmLabel">Oops something went wrong,please try again</h3></i>
+         <br>
+         <br>
+         <div class="col-sm-2 col-sm-offset-5">
+          <form action="http://www.chaatbox.com/" method="get">
+            <button class="btn btn-danger float-right margin-right">Close</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
 
 <div class="modal" id="howitworks" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
  
-      <div class="container">
-     
-<button type="button" class="close white font-18 margin-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <div class="container">
+   
+    <button type="button" class="close white font-18 margin-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
 
-<section class="about" id="about">
-				<div class="white text-center">
-					<div class="white heading">
-<br>
+    <section class="about" id="about">
+      <div class="white text-center">
+       <div class="white heading">
+        <br>
 
-						<h2><b>How it works?</b></h2>
-						
-					</div>
-					<div class="about-content grey col-md-10 col-md-offset-1">
-						<h4>We love Chaat!!! And so does everyone else. We are here to make sure you get the mouthwatering taste of the best Chaat in Bangalore <b>RIGHT AT YOUR HOME</b>! You heard us! So have fun while you make and taste the best Chaat with your loved ones! And do let us know of the awesome experience. We’ll be waiting to hear from you <span class="fa fa-smile-o"></span><br>
-<br>
-
-						</h4>
-					</div>
-					<div class="process">
-<br>
-						<div class="col-md-3">
-							<%= image_tag 'touch.png',height: '100' %>
-							<h5>You place an order</h5>
-							<p class="grey"><small>You place an order on our website or by calling @ +919595404709. <br>PS: We love you for doing that!</small></p>
-						</div>
-						<div class="col-md-3">
-							<%= image_tag 'cook.png',height: '100' %>
-							<h5>Prepared, Packed & Delivered within 45 minutes!</h5>
-							<p class="grey"><small>Our awesome chefs carefully prepare & pack your order in the amazing Chaatboxes while we make sure the order reaches you hot & yummy</small></p>
-						</div>
-						<div class="col-md-3">
-							<%= image_tag 'mixture.png',height: '100' %>
-							<h5>You are our favorite cook!</h5>
-							<p class="grey"><small>Have fun using the Recipe Card that comes with the box & do your magic!</small></p>  
-						</div>
-                                                <div class="col-md-3">
-							<%= image_tag 'final.png',height: '100' %>
-							<h5>Yum!</h5>
-							<p class="grey"><small>It’s about time, sit with your loved ones while you eat your yummy, tasty & delicious Chaat! We hope to serve you again soon. ☺ </small></p>  
-						</div>
-                                                
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-			</section>
-
-
-
+        <h2><b>How it works?</b></h2>
+        
       </div>
- 
+      <div class="about-content grey col-md-10 col-md-offset-1">
+      </div>
+      <div class="process">
+        <br>
+        <div class="col-md-3">
+         <%= image_tag 'touch.png',height: '100' %>
+         <h5>You place an order</h5>
+         <p class="less-white"><small>You place an order on our website or by calling us on 09595404709. <br>PS: We love you for doing that!</small></p>
+       </div>
+       <div class="col-md-3">
+         <%= image_tag 'cook.png',height: '100' %>
+         <h5>Prepared, Packed & Delivered within 45 minutes!</h5>
+         <p class="less-white"><small>Our awesome chefs carefully prepare & pack your order in the amazing Chaatboxes while we make sure the order reaches you hot & yummy</small></p>
+       </div>
+       <div class="col-md-3">
+         <%= image_tag 'mixture.png',height: '100' %>
+         <h5>Do it Yourself!</h5>
+         <p class="less-white"><small> You are our favorite cook! Have fun crafting the chaat using the Recipe Card that comes with the box & do your magic!</small></p>  
+       </div>
+       <div class="col-md-3">
+         <%= image_tag 'final.png',height: '100' %>
+         <h5>Yum!</h5>
+         <p class="less-white"><small>It’s about time, sit with your loved ones while you eat your yummy, tasty & delicious Chaat! We hope to serve you again soon. ☺ </small></p>  
+       </div>
+       
+       <div class="clearfix"> </div>
+     </div>
+   </div>
+ </section>
+
+
+
+</div>
+
 </div>

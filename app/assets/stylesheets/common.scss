@@ -1,3 +1,6 @@
+body {
+}
+
 .food-background {
 	background-image: image-url(aloo-background);
    position:relative;
@@ -43,6 +46,9 @@ display:none;
 .margin-top{
 margin-top:15px;
 }
+.margin-top-5{
+margin-top:5px;
+}
 .green
 {
   color: green !important;
@@ -75,7 +81,7 @@ color: #786969 ;
 
 footer {
     //background-image: image-url(footer);
-      background-color: #000;
+      background-color: #111;
     padding: 40px 0px 0px;
     //border-top: 5px solid #333;
     display: block;
@@ -89,11 +95,13 @@ footer p {
     color: #D1D3D4;
 }
 
-
+.less-white {
+  color: #aaa
+}
 
 #about
 {
-background-color: #000;
+background-color: #111;
 }
 
 #howitworks
@@ -101,6 +109,10 @@ background-color: #000;
 
 positive:absolute;
 top:100px;
+}
+
+.font-weight-normal {
+  font-weight: normal;
 }
 
 
