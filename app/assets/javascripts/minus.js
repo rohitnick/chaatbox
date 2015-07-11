@@ -115,3 +115,16 @@ $('#pricess9').html(z*y);
 $('#total').html(total_order-y);
 }
 }
+function minus11()
+{
+var x=$('#num11').val();
+var y=$('#prices11').html();
+var total_order=$('#total').html();
+if(x!=1)
+{
+z=x-1;
+$('#num11').val(z);
+$('#pricess11').html(z*y);
+$('#total').html(total_order-y);
+}
+}

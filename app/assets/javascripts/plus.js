@@ -86,4 +86,13 @@ $('#pricess9').html((x-(-1))*y);
 var total_order=$('#total').html();
 $('#total').html(total_order-(-y));
 }
+function plus11()
+{
+var x=$('#num11').val();
+$('#num11').val(x-(-1));
+var y=$('#prices11').html();
+$('#pricess11').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
 
