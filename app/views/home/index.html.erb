@@ -11,10 +11,11 @@
     <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>"">
       <%= image_tag(product.image_url, :width => '100%' , :height => 160, :class => "product-image")%>
       <div class="well well-sm bg-white product-details js-product-details" >
-        <h4 class="js-product-name item-name"><%= product.name %></h4>
+        <span class="js-product-name item-name"><%= product.name %></span>
+<span class="item-price"> &#8377<i class="js-product-price"><%= product.price %> </i></span>
+<br>
+<br>
         <small><%= product.title %></small>
-        <br>
-        <span class="item-price"> &#8377<i class="js-product-price"><%= product.price %> </i></span>
       </div>
     </div>
     <% end %>
@@ -107,12 +108,7 @@
     </center>
   </div>
   <!-- End Order Summary -->
-  <div class="finish-message display-none white">
-    <h3 class="text-center"><i>Thanks For Ordering</i></h3>
-    <br>
-    <br>
-    <h5 class="text-center">You Will Recieve order within 40 minutes </h5>
-  </div>
+  
   <center>
     <button class="btn btn-success js-proceed margin-top-5"> Proceed </button>
     <!-- <p class="white">All our chaatboxes are sold out for today. Please check us back tomorrow and we will definitely have them available for you. </p> -->
@@ -135,7 +131,7 @@
      <div class="col-sm-6 col-xs-6">
        <h5 id="line-item-inner" class="item-name"> </h5>
      </div>
-     <div class="col-sm-1 col-xs-1 col-sm-offset-4 col-xs-offset-5 cross">
+     <div class="col-sm-1 col-xs-1 col-sm-offset-4 col-xs-offset-4 cross">
        <p class="red"><a href="#">&times</a></p>
      </div>
    </div>
@@ -155,6 +151,51 @@
 </div>
 </div>
 </div>
+<br>
+>
+<div class="col-sm-12">
+<div class="row">
+<div id="pepsi" class="col-sm-1 well well-sm margin-left"onclick="pepsi();" style="cursor: pointer;">
+<%=image_tag "pepsi.png",height: '80',width: '100'%>
+</div>
+<div class="col-sm-1 well well-sm margin-left"onclick="pepsi();" style="cursor: pointer;">
+<%=image_tag "pepsi.png",height: '80',width: '100'%>
+</div>
+<div class="col-sm-1 well well-sm margin-left"onclick="pepsi();" style="cursor: pointer;">
+<%=image_tag "pepsi.png",height: '80',width: '100'%>
+</div>
+<div class="col-sm-1 well well-sm margin-left"onclick="pepsi();" style="cursor: pointer;">
+<%=image_tag "pepsi.png",height: '80',width: '100'%>
+</div>
+<div class="col-sm-1 well well-sm margin-left"onclick="pepsi();" style="cursor: pointer;">
+<%=image_tag "pepsi.png",height: '80',width: '100'%>
+</div>
+<div class="col-sm-1 well well-sm margin-left"onclick="pepsi();" style="cursor: pointer;">
+<%=image_tag "pepsi.png",height: '80',width: '100'%>
+</div>
+<div class="col-sm-1 well well-sm margin-left"onclick="pepsi();" style="cursor: pointer;">
+<%=image_tag "pepsi.png",height: '80',width: '100'%>
+</div>
+<div class="col-sm-1 well well-sm margin-left"onclick="pepsi();" style="cursor: pointer;">
+<%=image_tag "pepsi.png",height: '80',width: '100'%>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
 <br>
 <br>
 <br>
