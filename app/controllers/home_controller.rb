@@ -5,16 +5,20 @@ class HomeController < ApplicationController
   end
   
   def create
-    @order=Order.create(customers_name:chaat_params["customers_name"],customers_street_address:chaat_params["customers_street_address"],customers_telephone:chaat_params["customers_telephone"],customers_email_address:chaat_params["customers_email_address"],order_total:chaat_params["order_total"],deliveryarea:chaat_params["deliveryarea"],time:chaat_params["time"])
+    @order=Order.create(order_params.merge(status: 'Arrived'))
 
-    chaat_params["product"].each_index do |i|
-      @order.line_items.create(product_id: Product.find_by_name(chaat_params["product"][i]).id ,quantity:chaat_params["quantity"][i])
+    details_params["product"].each_index do |i|
+      @order.line_items.create(product_id: Product.find_by_name(details_params["product"][i]).id ,quantity:details_params["quantity"][i])
     end
     render json: {status: 'success'}
   end
 
   private
-  def chaat_params
+  def order_params
+    params.require(:details).permit(:customers_name,:customers_street_address,:customers_telephone,:customers_email_address,:order_total,:deliveryarea,:time)
+  end
+
+  def details_params
     params.require(:details).permit(:customers_name,:customers_street_address,:customers_telephone,:customers_email_address,:order_total,:deliveryarea,:time,:product => [],:quantity => [])
   end
 end
