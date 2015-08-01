@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150629070921) do
+ActiveRecord::Schema.define(version: 20150801180305) do
 
   create_table "leavemessages", force: :cascade do |t|
     t.string   "name"
@@ -32,20 +32,11 @@ ActiveRecord::Schema.define(version: 20150629070921) do
 
   create_table "messages", force: :cascade do |t|
     t.string   "name"
+    t.string   "mobilenumber"
     t.string   "email"
-    t.string   "mobile"
     t.string   "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "messags", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "mobile"
-    t.string   "messageus"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "orders", force: :cascade do |t|
@@ -60,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150629070921) do
     t.datetime "updated_at",               null: false
     t.string   "deliveryarea"
     t.string   "time"
+    t.integer  "status"
   end
 
   create_table "products", force: :cascade do |t|

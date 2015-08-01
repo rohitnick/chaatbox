@@ -36,6 +36,9 @@ gem 'bootstrap-sass', '~> 3.3.4'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+# Heroku recommends 'unicorn', but using 'unicorn-rails' instead as it is better for local dev (with zeus), while being the same for deployment on heroku
+gem 'unicorn-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
