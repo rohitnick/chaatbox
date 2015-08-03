@@ -45,9 +45,6 @@ RailsAdmin.config do |config|
       field :created_at do
         date_format :short
       end
-      field :status do 
-        label 'Status'
-      end
       field :order_total do 
         label 'Total'
       end
@@ -59,6 +56,9 @@ RailsAdmin.config do |config|
       end
       field :customers_street_address do
         label 'Address'
+      end
+      field :status do 
+        label 'Status'
       end
       field :line_items do
         pretty_value do
