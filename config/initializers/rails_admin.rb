@@ -3,10 +3,10 @@ RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+  config.current_user_method(&:current_user)
 
   ## == Cancan ==
   # config.authorize_with :cancan
@@ -30,13 +30,6 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
-  end
-
-  RailsAdmin.config do |config|
-    config.authenticate_with do
-      warden.authenticate! scope: :user
-    end
-    config.current_user_method(&:current_user)
   end
 
   config.model 'Order' do
@@ -67,6 +60,7 @@ RailsAdmin.config do |config|
       field :status do 
         label 'Status'
         column_width 70
+        searchable false
       end
       field :line_items do
         pretty_value do
