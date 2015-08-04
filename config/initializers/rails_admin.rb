@@ -41,24 +41,32 @@ RailsAdmin.config do |config|
 
   config.model 'Order' do
     list do
-      field :id
+      field :id do
+        column_width 30
+      end
       field :created_at do
         date_format :short
+        column_width 90
       end
       field :order_total do 
         label 'Total'
+        column_width 40
       end
       field :customers_name do
         label 'Name'
+        column_width 100
       end
       field :customers_telephone do
         label 'Phone'
+        column_width 90
       end
       field :customers_street_address do
         label 'Address'
+        column_width 320
       end
       field :status do 
         label 'Status'
+        column_width 70
       end
       field :line_items do
         pretty_value do
