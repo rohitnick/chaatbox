@@ -216,6 +216,7 @@
 <br>
 					</div>
 				</div>
+        <br/>
 			</section>
 <div class="modal" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -333,3 +334,14 @@
 </div>
 
 </div>
+
+
+
+<div id="js-slack-url" class="hide" >
+  <% if ENV['RAILS_ENV'] ==  'development' %>
+    https://hooks.slack.com/services/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
+  <% else %>
+    http://www.yahoo.com
+  <% end %>
+</div>
+
