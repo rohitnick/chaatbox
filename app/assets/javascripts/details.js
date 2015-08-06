@@ -1,20 +1,22 @@
 $(document).ready(function(){
   $('#details').submit(function(e){
     e.preventDefault();
-   
+
     $(".details").slideUp();
     var x=''; var q='';
-    $('.line-item').each(function(i)
+    var products='';
+    $('#line-items .line-item').each(function(i)
     {
       x=x+$(this).find('#line-item-inner').html() + '.';
       q=q+$(this).find('.num').val() + '.';
+      products = products+$(this).find('#line-item-inner').html()+' -> '+$(this).find('.num').val() + ' ,';
     });
     var y=x.split('.');
-    var length=y.length-2;
-    y.splice(length,2);
+    var length=y.length-1;
+    y.splice(length,1);
     var z=q.split('.');
-    var length=z.length-2;
-    z.splice(length,2);
+    var length=z.length-1;
+    z.splice(length,1);
     var i;
     for (i=0;i<y.length;i++)
     {
@@ -35,10 +37,10 @@ $(document).ready(function(){
     var q = $('#area :selected').text();
     $(".confirmtotal").html("Your order Total is &#8377 " + t);
 
-   
 
-     
-$(".confirmdetails").html("<b>Name:&nbsp</b>" + "<br>" + n + "<br><br>" +"<b>Mobile:&nbsp</b>" + "<br>" + m + "<br><br>" + "<b>Email:&nbsp</b>" + "<br>" +  e + "<br>");
+
+
+    $(".confirmdetails").html("<b>Name:&nbsp</b>" + "<br>" + n + "<br><br>" +"<b>Mobile:&nbsp</b>" + "<br>" + m + "<br><br>" + "<b>Email:&nbsp</b>" + "<br>" +  e + "<br>");
     $(".confirmaddress").html("<b>Address:&nbsp</b>" + "<br>" +  a)
 
     $.ajax({
@@ -46,15 +48,29 @@ $(".confirmdetails").html("<b>Name:&nbsp</b>" + "<br>" + n + "<br><br>" +"<b>Mob
       url: 'create',
       dataType: 'json',
       data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,
-                     customers_email_address: e,order_total: t,deliveryarea: q,time: time,product: y,quantity: z}}),
+       customers_email_address: e,order_total: t,deliveryarea: q,time: time,product: y,quantity: z}}),
       success: function ()
-{
- $('#hmm').click();
-},
+      {
+        $('#hmm').click();
+      },
       error: function ()
-{
- $('#errorss').click();
-}
+      {
+        $('#errorss').click();
+      }
+    });
+
+    var slack_url =  $('#js-slack-url').html().trim();
+    var post_data = "Name: "+n+"\\nAddress: "+a+"\\nPhone: "+m+"\\nEmail:"+e+"\\nTotal: "+t+"\\nArea: "+q+"\\nTime: "+time+"\\nProducts: "+products;
+
+    $.ajax({
+      type: "POST",
+      url: slack_url,
+      dataType: 'json',
+      data: 'payload={"channel": "#new-orders", "username": "'+m+'", "text": "'+post_data+'", "icon_emoji": ":ghost:"}',
+      success: function ()
+      {
+        alert('success');
+      }
     });
   });
 });
