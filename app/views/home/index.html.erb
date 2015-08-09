@@ -56,9 +56,14 @@
             <textarea id="address-input" class="form-control" rows="4" name="address"  placeholder="Address For Delivery"  required="true" ></textarea>
           </div>
         </div>
+
+
+        <div class="form-group">
+
+        </div>
         <div class="form-group">
           <div class="col-sm-8 col-sm-offset-3">
-            <input id="finish" name="submit" type="submit"  value="Confirm Order" class="btn btn-success">
+            <input id="finish" name="submit" type="submit"  value="Place Order" class="btn btn-success">
           </div>
         </div>
         <div class="form-group hide">
@@ -97,6 +102,9 @@
       <div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
         <button id="delivery" class="btn btn-success"> Proceed </button>
       </div>
+      <div class="col-sm-8 col-sm-offset-3 hide">
+            <input id="timingschedule" name="submit" type="button" data-toggle="modal" data-target="#timing" value="Timing Schedule" class="btn btn-success">
+          </div>
     </div>
   </div>
   <!-- End Delivery Details -->
@@ -235,7 +243,7 @@
               <i><h4 class="discounttotal"></h4></i>
             </div>
             <div class="col-sm-12 ">
-              <i><h4 class="red">**We will deliver within 45 minutes**</h4></i>
+              <i><h4 class="red">**We will deliver within your selected time**</h4></i>
             </div>
           </div>
           <div class="col-sm-4">
@@ -284,6 +292,44 @@
 </div>
 </div>
 
+<div class="modal" id="timing" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+       <h3 class="text-center">Between What Time Would You Like Your Chaatboxes To Be Delivered?</h3>
+<br>
+<br>
+
+<select required="" id="selecttime" class="form-control margin-to-5">
+           <option style="font-size:10">Within 1 Hour</option> 
+           <option style="font-size:10">12:00PM-12:30PM</option> 
+           <option style="font-size:10">12:30PM-1:00PM</option>
+           <option style="font-size:10">1:00PM-1:30PM</option> 
+           <option style="font-size:10">1:30PM-2:00PM</option> 
+           <option style="font-size:10">2:00PM-2:30PM</option> 
+           <option style="font-size:10">2:30PM-3:00PM</option> 
+           <option style="font-size:10">3:00PM-3:30PM</option>
+           <option style="font-size:10">3:30PM-4:00PM</option> 
+           <option style="font-size:10">4:00PM-4:30PM</option> 
+           <option style="font-size:10">4:30PM-5:00PM</option> 
+           <option style="font-size:10">5:00PM-5:30PM</option> 
+           <option style="font-size:10">5:30PM-6:00PM</option>
+           <option style="font-size:10">6:00PM-6:30PM</option> 
+           <option style="font-size:10">6:30PM-7:00PM</option> 
+           <option style="font-size:10">7:00PM-7:30PM</option> 
+           <option style="font-size:10">7:30PM-8:00PM</option> 
+           <option style="font-size:10">8:00PM-8:30PM</option>
+           <option style="font-size:10">8:30PM-9:00PM</option> 
+           <option style="font-size:10">9:00PM-9:30PM</option> 
+           <option style="font-size:10">9:30PM-10:00PM</option> 
+         </select>
+<br>
+<br>
+<center><button class="btn btn-success selectedtime" data-dismiss="modal">Proceed</button></center>
+   </div>
+  </div>
+</div>
+</div>
 <div class="modal" id="howitworks" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
  
   <div class="container">
@@ -310,7 +356,7 @@
        </div>
        <div class="col-md-3">
          <%= image_tag 'cook.png',height: '100' %>
-         <h5>Prepared, Packed & Delivered within 45 minutes!</h5>
+         <h5>Prepared, Packed & Delivered within 1 hour!</h5>
          <p class="less-white"><small>Our awesome chefs carefully prepare & pack your order in the amazing Chaatboxes while we make sure the order reaches you hot & yummy</small></p>
        </div>
        <div class="col-md-3">
