@@ -16,6 +16,9 @@ body {
 .bg-green{
 	background-color: #C5E3BF !important;
 }
+.bg-gree{
+	background-color: #00A651 !important;
+}
 /*.bg-black
 {
 background-color: #000000 !important;
@@ -120,9 +123,10 @@ top:100px;
 }
 
 
-.heading {
-font-family: 'Indie Flower', cursive;
+.logo {
+font-family: 'Over the Rainbow'; 
 }
+
 #love
 {
 background-color:#DBE2EA;
@@ -130,4 +134,16 @@ background-color:#DBE2EA;
 
 .navbar {
    background:rgba(0,0,0,0.2);
+}
+
+@font-face {
+    font-family: nirmalaS;
+    src: url(/assets/NirmalaS.ttf);
+}
+
+.data{
+    font-family: nirmalaS;
+}
+.heading {
+font-family: 'Indie Flower';
 }

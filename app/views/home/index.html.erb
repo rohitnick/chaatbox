@@ -27,7 +27,7 @@
 
 
     <div class="details display-none">
-      <center class="dotted-bottom-border white"><h4>Delivery Details</h4></center>
+      <center class="dotted-bottom-border white"><h4 class="data">Delivery Details</h4></center>
       <form id ="details" class="form-horizontal">
         <div class="form-group margin-top-5">
 
@@ -76,7 +76,7 @@
 
 
     <div class="text-center subarea display-none">
-      <label class="text-center"><span class="white font-weight-normal">Please select an area for delivery</span>
+      <label class="text-center"><span class="white font-weight-normal data">Please select an area for delivery</span>
         <center>
           <select required="" id="area" class="form-control margin-to-5">
            <option style="font-size:10">Hope Farm,Bangalore</option> 
@@ -88,7 +88,7 @@
          </select>
        </center>
 
-       <span class="white"><h5>Order Timing 1:00 pm to 10:00 pm</h5></span>
+       <span class="white"><h5 class="data">Order Timing 1:00 pm to 10:00 pm</h5></span>
        <h5 id="time" class="white"></h5>
 
      </label>
@@ -108,21 +108,21 @@
   </div>
   <!-- End Order Summary -->
   <div class="finish-message display-none white">
-    <h3 class="text-center"><i>Thanks For Ordering</i></h3>
+    <h3 class="text-center"><i class="data">Thanks For Ordering</i></h3>
     <br>
     <br>
-    <h5 class="text-center">You Will Recieve order within 40 minutes </h5>
+    <h5 class="text-center data">You Will Recieve order within 40 minutes </h5>
   </div>
   <center>
     <% if Rails.application.config.sold_out %>
       <button disabled="disabled" class="btn btn-success js-proceed">SOLD OUT</button>
-      <p class="white">All our chaatboxes are sold out for today. Please check us back tomorrow and we will definitely have them available for you. </p>
+      <p class="white data">All our chaatboxes are sold out for today. Please check us back tomorrow and we will definitely have them available for you. </p>
     <% else %>
       <button class="btn btn-success js-proceed margin-top-5"> Proceed </button>
     <% end %>
   </center>
   <h4 class="please-select text-center red"></h4>
-  <h4 id="minorder" class="white display-none text-center">**Minimum order amount is &#8377 100**</h4>
+  <h4 id="minorder" class="white display-none text-center data">**Minimum order amount is &#8377 100**</h4>
 
 </div>
 <center class="white">
@@ -175,7 +175,7 @@
 
 						<p></p>
 					</div>
-					<div class="love row">
+					<div class="loverow">
 						<div class="review col-md-4">
 <div class="row">
 							<div class="photo">
@@ -229,7 +229,7 @@
         <i><h3 class="modal-title text-center" id="confirmLabel">Thank You For Ordering</h3></i>
       </div>
       <div class="modal-body">
-        <div class="row">
+        <div class="row data">
           <div class="col-sm-8">
             <div class=" col-sm-12">
               <i><h4 class="confirmtotal"></h4></i>
@@ -239,7 +239,7 @@
               <i><h4 class="discounttotal"></h4></i>
             </div>
             <div class="col-sm-12 ">
-              <i><h4 class="red">**We will deliver within 45 minutes**</h4></i>
+              <i><h4 class="red data">**We will deliver within 45 minutes**</h4></i>
             </div>
           </div>
           <div class="col-sm-4">
@@ -247,7 +247,7 @@
           </div>
         </div>
         <br>
-        <div class="row">
+        <div class="row data">
 
           <div class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
             <p class="fb-like" data-href="https://www.facebook.com/chaatbox" data-layout="standard" data-action="like" data-show-faces="true" data-share="true">
@@ -274,7 +274,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <div class="row">
-         <i><h3 class="modal-title text-center" id="confirmLabel">Oops something went wrong,please try again</h3></i>
+         <i><h3 class="modal-title text-center data" id="confirmLabel">Oops something went wrong,please try again</h3></i>
          <br>
          <br>
          <div class="col-sm-2 col-sm-offset-5">
@@ -309,23 +309,23 @@
         <br>
         <div class="col-md-3">
          <%= image_tag 'touch.png',height: '100' %>
-         <h5>You place an order</h5>
-         <p class="less-white"><small>You place an order on our website or by calling us on 09595404709. <br>PS: We love you for doing that!</small></p>
+         <h5 class="data">You place an order</h5>
+         <p class="less-white data"><small>You place an order on our website or by calling us on 09595404709. <br>PS: We love you for doing that!</small></p>
        </div>
        <div class="col-md-3">
          <%= image_tag 'cook.png',height: '100' %>
-         <h5>Prepared, Packed & Delivered within 45 minutes!</h5>
-         <p class="less-white"><small>Our awesome chefs carefully prepare & pack your order in the amazing Chaatboxes while we make sure the order reaches you hot & yummy</small></p>
+         <h5 class="data">Prepared, Packed & Delivered within 45 minutes!</h5>
+         <p class="less-white data"><small>Our awesome chefs carefully prepare & pack your order in the amazing Chaatboxes while we make sure the order reaches you hot & yummy</small></p>
        </div>
        <div class="col-md-3">
          <%= image_tag 'mixture.png',height: '100' %>
-         <h5>Do it Yourself!</h5>
-         <p class="less-white"><small> You are our favorite cook! Have fun crafting the chaat using the Recipe Card that comes with the box & do your magic!</small></p>  
+         <h5 class="data">Do it Yourself!</h5>
+         <p class="less-white data"><small> You are our favorite cook! Have fun crafting the chaat using the Recipe Card that comes with the box & do your magic!</small></p>  
        </div>
        <div class="col-md-3">
          <%= image_tag 'final.png',height: '100' %>
-         <h5>Yum!</h5>
-         <p class="less-white"><small>It’s about time, sit with your loved ones while you eat your yummy, tasty & delicious Chaat! We hope to serve you again soon. ☺ </small></p>  
+         <h5 class="data">Yum!</h5>
+         <p class="less-white data"><small>It’s about time, sit with your loved ones while you eat your yummy, tasty & delicious Chaat! We hope to serve you again soon. ☺ </small></p>  
        </div>
        
        <div class="clearfix"> </div>
