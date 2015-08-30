@@ -39,6 +39,7 @@ $(document).on "page:change", ->
       $('#line-item-container .line-item .pricess').html(price)
       $('#line-items').append($('#line-item-container').html())
       $(this).addClass('js-product-selected')
+      $(this).addClass('over')
       $(this).find('.js-product-details').addClass('bg-green')
       $('.finish-message').slideUp()
       $("#name-input").val("");

@@ -1,5 +1,8 @@
 body {
 }
+.js-product-selected{
+opacity: 0.4;
+}
 
 .food-background {
 	background-image: image-url(Background);
@@ -27,7 +30,7 @@ background-color: #000000 !important;
   background-color: #EF3E3A !important;
 }
 .bg-transparent {
-  background-color: rgba(0,0,0,.4) !important;
+  background-color: rgba(0,0,0,.1) !important;
 }
 .nopadding {
   padding: 0 !important;
@@ -136,13 +139,8 @@ background-color:#DBE2EA;
    background:rgba(0,0,0,0.2);
 }
 
-@font-face {
-    font-family: nirmalaS;
-    src: url(/assets/NirmalaS.ttf);
-}
-
 .data{
-    font-family: nirmalaS;
+    font-family: 'Lato';
 }
 .heading {
 font-family: 'Indie Flower';
