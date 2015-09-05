@@ -1,7 +1,7 @@
 body {
 }
 .js-product-selected{
-opacity: 0.4;
+background-color:black;
 }
 
 .food-background {
@@ -145,7 +145,8 @@ background-color:#DBE2EA;
 .heading {
 font-family: 'Indie Flower';
 }
-.logo:hover
+
+ul.navbar-right.nav li a:hover
 {
-color:red;
+background-color: black;
 }

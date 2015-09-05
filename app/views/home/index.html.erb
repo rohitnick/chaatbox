@@ -6,7 +6,7 @@
   <div class="row">
     <% @products.each do |product| %>
     <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>"">
-      <%= image_tag(product.image_url, :width => '100%' , :height => 180, :class => "product-image")%>
+      <%= image_tag(product.image_url, :width => '100%' , :height => '100%', :class => "product-image")%>
       <div class="display-none well well-sm bg-white product-details js-product-details" >
         <h4 class="js-product-name item-name"><%= product.name %></h4>
         <small><%= product.title %></small>
