@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150809094523) do
+ActiveRecord::Schema.define(version: 20150905170707) do
 
   create_table "leavemessages", force: :cascade do |t|
     t.string   "name"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20150809094523) do
     t.string   "payableamount"
     t.integer  "status"
     t.string   "selectedtime"
+    t.integer  "source"
   end
 
   create_table "products", force: :cascade do |t|
