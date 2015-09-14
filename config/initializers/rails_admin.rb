@@ -64,7 +64,7 @@ RailsAdmin.config do |config|
       end
       field :line_items do
         pretty_value do
-          value.pluck(:product_id, :quantity)
+          value.pluck(:product_id,:beverage_id,:quantity)
         end
       end
       field :customers_email_address do
