@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150809094523) do
+ActiveRecord::Schema.define(version: 20150914170011) do
+
+  create_table "beverages", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "price"
+    t.string   "title"
+    t.integer  "sale_price"
+    t.string   "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "order_id"
+  end
 
   create_table "leavemessages", force: :cascade do |t|
     t.string   "name"
@@ -26,8 +37,9 @@ ActiveRecord::Schema.define(version: 20150809094523) do
     t.integer  "order_id"
     t.integer  "product_id"
     t.integer  "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "beverage_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -63,6 +75,7 @@ ActiveRecord::Schema.define(version: 20150809094523) do
     t.string   "payableamount"
     t.integer  "status"
     t.string   "selectedtime"
+    t.integer  "source"
   end
 
   create_table "products", force: :cascade do |t|
