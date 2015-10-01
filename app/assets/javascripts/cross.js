@@ -90,3 +90,112 @@ $('#11').removeClass('js-product-selected');
 $('#11').find('.js-product-details').removeClass('bg-green');
 $('#total').html($('#total').html()-(x*y));
 }
+function cross12()
+{ 
+var x=$('#num12').val();
+var y=$('#prices12').html();
+$('#line-items #tag12').remove();
+$('#12').removeClass('js-product-selected');
+$('#12').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross13()
+{ 
+var x=$('#num13').val();
+var y=$('#prices13').html();
+$('#line-items #tag13').remove();
+$('#13').removeClass('js-product-selected');
+$('#13').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross14()
+{ 
+var x=$('#num14').val();
+var y=$('#prices14').html();
+$('#line-items #tag14').remove();
+$('#14').removeClass('js-product-selected');
+$('#14').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross15()
+{ 
+var x=$('#num15').val();
+var y=$('#prices15').html();
+$('#line-items #tag15').remove();
+$('#15').removeClass('js-product-selected');
+$('#15').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross16()
+{ 
+var x=$('#num16').val();
+var y=$('#prices16').html();
+$('#line-items #tag16').remove();
+$('#16').removeClass('js-product-selected');
+$('#16').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross17()
+{ 
+var x=$('#num17').val();
+var y=$('#prices17').html();
+$('#line-items #tag17').remove();
+$('#17').removeClass('js-product-selected');
+$('#17').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross18()
+{ 
+var x=$('#num18').val();
+var y=$('#prices18').html();
+$('#line-items #tag18').remove();
+$('#18').removeClass('js-product-selected');
+$('#18').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross19()
+{ 
+var x=$('#num19').val();
+var y=$('#prices19').html();
+$('#line-items #tag19').remove();
+$('#19').removeClass('js-product-selected');
+$('#19').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross20()
+{ 
+var x=$('#num20').val();
+var y=$('#prices20').html();
+$('#line-items #tag20').remove();
+$('#20').removeClass('js-product-selected');
+$('#20').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross21()
+{ 
+var x=$('#num21').val();
+var y=$('#prices21').html();
+$('#line-items #tag21').remove();
+$('#21').removeClass('js-product-selected');
+$('#21').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross22()
+{ 
+var x=$('#num22').val();
+var y=$('#prices22').html();
+$('#line-items #tag22').remove();
+$('#22').removeClass('js-product-selected');
+$('#22').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross23()
+{ 
+var x=$('#num23').val();
+var y=$('#prices23').html();
+$('#line-items #tag23').remove();
+$('#23').removeClass('js-product-selected');
+$('#23').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+
