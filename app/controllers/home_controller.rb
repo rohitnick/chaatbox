@@ -16,10 +16,10 @@ class HomeController < ApplicationController
 
   private
   def order_params
-    params.require(:details).permit(:customers_name,:customers_street_address,:customers_telephone,:customers_email_address,:order_total,:deliveryarea,:time)
+    params.require(:details).permit(:customers_name,:customers_street_address,:customers_telephone,:customers_email_address,:order_total,:deliveryarea,:time,:selectedtime)
   end
 
   def details_params
-    params.require(:details).permit(:customers_name,:customers_street_address,:customers_telephone,:customers_email_address,:order_total,:deliveryarea,:time,:product => [],:quantity => [])
+    params.require(:details).permit(:customers_name,:customers_street_address,:customers_telephone,:customers_email_address,:order_total,:deliveryarea,:time,:selectedtime,:product => [],:quantity => [])
   end
 end

@@ -24,9 +24,13 @@ $("#minorder").show();
   });
   $(".error").hide();  
   $("#delivery").click(function(){
-     $(".subarea").slideUp();
-      $(".details").slideDown();
+     $("#timingschedule").click();
+
    });
+ $(".selectedtime").click(function(){
+ $(".subarea").slideUp();
+      $(".details").slideDown();
+});
 });
 
 

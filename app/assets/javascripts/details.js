@@ -35,6 +35,7 @@ $(document).ready(function(){
     var e=document.getElementById("email-input").value;
     var a=document.getElementById("address-input").value;
     var q = $('#area :selected').text();
+    var selectedtime=$('#selecttime :selected').text();
     $(".confirmtotal").html("Your order Total is &#8377 " + t);
 
 
@@ -48,7 +49,7 @@ $(document).ready(function(){
       url: 'create',
       dataType: 'json',
       data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,
-       customers_email_address: e,order_total: t,deliveryarea: q,time: time,product: y,quantity: z}}),
+       customers_email_address: e,order_total: t,deliveryarea: q,time: time,selectedtime: selectedtime,product: y,quantity: z}}),
       success: function ()
       {
         $('#hmm').click();
