@@ -198,4 +198,22 @@ $('#23').removeClass('js-product-selected');
 $('#23').find('.js-product-details').removeClass('bg-green');
 $('#total').html($('#total').html()-(x*y));
 }
+function cross24()
+{ 
+var x=$('#num24').val();
+var y=$('#prices24').html();
+$('#line-items #tag24').remove();
+$('#24').removeClass('js-product-selected');
+$('#24').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
+function cross25()
+{ 
+var x=$('#num25').val();
+var y=$('#prices25').html();
+$('#line-items #tag25').remove();
+$('#25').removeClass('js-product-selected');
+$('#25').find('.js-product-details').removeClass('bg-green');
+$('#total').html($('#total').html()-(x*y));
+}
 

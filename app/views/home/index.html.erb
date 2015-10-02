@@ -1,7 +1,7 @@
 <div class="row container-fluid">
   <div class="col-md-9">
   <div class="row">
-  <center><p class="white font-22">Our Chaats <span> <%= image_tag('finger.png',height:'32') %></span></p>
+     <p class="white font-22">Chaats <span> <%= image_tag('finger.png',height:'32') %></span></p>   
     <% @chaats.each do |chaat| %>
     <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=chaat.id%>"">
       <%= image_tag(chaat.image_url,:width => '100%' , :height => '100%', :class => "product-image")%>
@@ -18,7 +18,7 @@
 
   <div class="row">
     <br>
-    <center><p class="white font-22">Our Beverages <span> <%= image_tag('finger.png',height:'32') %></span></p> 
+    <p class="white font-22">Beverages <span> <%= image_tag('finger.png',height:'32') %></span></p>
     <% @bevs.each do |bev| %>
     <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=bev.id%>"">
       <%= image_tag(bev.image_url,:width => '100%' , :height => '100%', :class => "product-image")%>

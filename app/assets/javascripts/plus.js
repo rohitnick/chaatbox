@@ -204,4 +204,24 @@ var total_order=$('#total').html();
 $('#total').html(total_order-(-y));
 }
 
+function plus24()
+{
+var x=$('#num24').val();
+$('#num24').val(x-(-1));
+var y=$('#prices24').html();
+$('#pricess24').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+
+function plus25()
+{
+var x=$('#num25').val();
+$('#num25').val(x-(-1));
+var y=$('#prices25').html();
+$('#pricess25').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+
 
