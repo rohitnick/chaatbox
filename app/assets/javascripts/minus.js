@@ -271,4 +271,30 @@ $('#pricess23').html(z*y);
 $('#total').html(total_order-y);
 }
 }
+function minus25()
+{
+var x=$('#num25').val();
+var y=$('#prices25').html();
+var total_order=$('#total').html();
+if(x!=1)
+{
+z=x-1;
+$('#num25').val(z);
+$('#pricess25').html(z*y);
+$('#total').html(total_order-y);
+}
+}
+function minus24()
+{
+var x=$('#num24').val();
+var y=$('#prices24').html();
+var total_order=$('#total').html();
+if(x!=1)
+{
+z=x-1;
+$('#num24').val(z);
+$('#pricess24').html(z*y);
+$('#total').html(total_order-y);
+}
+}
 
