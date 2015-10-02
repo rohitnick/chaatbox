@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   skip_before_filter  :verify_authenticity_token
   def index
-    @products = Product.all
+    @chaats = Product.where(category:0)
+    @bevs = Product.where(category:1)
   end
   
   def create

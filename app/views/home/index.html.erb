@@ -1,25 +1,42 @@
 <div class="row container-fluid">
   <div class="col-md-9">
   <div class="row">
-    <% @products.each do |product| %>
-    <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=product.id%>"">
-      <%= image_tag(product.image_url,:width => '100%' , :height => '100%', :class => "product-image")%>
+  <center><p class="white font-22">Our Chaats <span> <%= image_tag('finger.png',height:'32') %></span></p>
+    <% @chaats.each do |chaat| %>
+    <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=chaat.id%>"">
+      <%= image_tag(chaat.image_url,:width => '100%' , :height => '100%', :class => "product-image")%>
 
       <div class="display-none well well-sm bg-white product-details js-product-details" >
-        <h4 class="js-product-name item-name"><%= product.name %></h4>
-        <small><%= product.title %></small>
+        <h4 class="js-product-name item-name"><%= chaat.name %></h4>
+        <small><%= chaat.title %></small>
         <br>
-        <span class="item-price"> &#8377<i class="js-product-price"><%= product.price %> </i></span>
+        <span class="item-price"> &#8377<i class="js-product-price"><%= chaat.price %> </i></span>
+      </div> 
+    </div>
+    <% end %>
+</div>
+
+  <div class="row">
+    <br>
+    <center><p class="white font-22">Our Beverages <span> <%= image_tag('finger.png',height:'32') %></span></p> 
+    <% @bevs.each do |bev| %>
+    <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=bev.id%>"">
+      <%= image_tag(bev.image_url,:width => '100%' , :height => '100%', :class => "product-image")%>
+
+      <div class="display-none well well-sm bg-white product-details js-product-details" >
+        <h4 class="js-product-name item-name"><%= bev.name %></h4>
+        <small><%= bev.title %></small>
+        <br>
+        <span class="item-price"> &#8377<i class="js-product-price"><%= bev.price %> </i></span>
       </div> 
 
     </div>
     <% end %>
-  </div>
+</div>
 </div>
 <div class="col-md-3">
   <br>
 <br>
-  <br>
   <div class="well well-sm bg-transparent font-18">
 
 

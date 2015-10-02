@@ -95,4 +95,113 @@ $('#pricess11').html((x-(-1))*y);
 var total_order=$('#total').html();
 $('#total').html(total_order-(-y));
 }
+function plus12()
+{
+var x=$('#num12').val();
+$('#num12').val(x-(-1));
+var y=$('#prices12').html();
+$('#pricess12').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus13()
+{
+var x=$('#num13').val();
+$('#num13').val(x-(-1));
+var y=$('#prices13').html();
+$('#pricess13').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus14()
+{
+var x=$('#num14').val();
+$('#num14').val(x-(-1));
+var y=$('#prices14').html();
+$('#pricess14').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus15()
+{
+var x=$('#num15').val();
+$('#num15').val(x-(-1));
+var y=$('#prices15').html();
+$('#pricess15').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus16()
+{
+var x=$('#num16').val();
+$('#num16').val(x-(-1));
+var y=$('#prices16').html();
+$('#pricess16').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus17()
+{
+var x=$('#num17').val();
+$('#num17').val(x-(-1));
+var y=$('#prices17').html();
+$('#pricess17').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus18()
+{
+var x=$('#num18').val();
+$('#num18').val(x-(-1));
+var y=$('#prices18').html();
+$('#pricess18').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus19()
+{
+var x=$('#num19').val();
+$('#num19').val(x-(-1));
+var y=$('#prices19').html();
+$('#pricess19').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus20()
+{
+var x=$('#num20').val();
+$('#num20').val(x-(-1));
+var y=$('#prices20').html();
+$('#pricess20').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus21()
+{
+var x=$('#num21').val();
+$('#num21').val(x-(-1));
+var y=$('#prices21').html();
+$('#pricess21').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus22()
+{
+var x=$('#num22').val();
+$('#num22').val(x-(-1));
+var y=$('#prices22').html();
+$('#pricess22').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+function plus23()
+{
+var x=$('#num23').val();
+$('#num23').val(x-(-1));
+var y=$('#prices23').html();
+$('#pricess23').html((x-(-1))*y);
+var total_order=$('#total').html();
+$('#total').html(total_order-(-y));
+}
+
 
