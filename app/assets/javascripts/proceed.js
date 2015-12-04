@@ -3,6 +3,7 @@ $(document).ready(function(){
 var t=$("#total").html();
 if(t>=100 || t==0)
 {
+$("#note").hide();
 $("#minorder").hide();
    if ($('.js-product-selected').length >=1)
     {
@@ -20,6 +21,7 @@ else
 {
 if($('.js-product-selected').length >=1)
 $("#minorder").show();
+$("#note").hide();
 }
   });
   $(".error").hide();  

@@ -7,6 +7,7 @@ $(document).on "page:change", ->
     $(".details").slideUp()
     $("#line-items").show()
     $(".js-proceed").show()
+    $("#note").show()
     $(".please-select").hide()
     $('.subarea').slideUp()
     $("#minorder").hide();
@@ -25,6 +26,7 @@ $(document).on "page:change", ->
       $("#address-input").val("");
     else
       name = $(this).find('.js-product-name').html() 
+      $("#note").show()
       price = $(this).find('.js-product-price').html()
       $('#total').html($('#total').html()-(-price))
       $('#line-item-container .line-item').attr('id', "tag" + id)
