@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(".js-proceed").click(function(){
 var t=$("#total").html();
-if(t>=100 || t==0)
+if(t>=150 || t==0)
 {
 $("#minorder").hide();
    if ($('.js-product-selected').length >=1)
