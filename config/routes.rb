@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   get 'index' => 'home#index'
   post 'create' => 'home#create'
   post 'message' => 'contact#message'
+  post 'add_line_item_to_order' => 'home#add_line_item_to_order'
+  post 'remove_line_item_from_order' => 'home#remove_line_item_from_order'
+  post 'update_line_item_for_order'  => 'home#update_line_item_for_order'
 
-  # The priority is based upon order of creation: first created -> highest priority.
+	# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

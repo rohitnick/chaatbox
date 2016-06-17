@@ -3,62 +3,35 @@ $(document).ready(function(){
     e.preventDefault();
 
     $(".details").slideUp();
-    var x=''; var q='';
-    var products='';
-    $('#line-items .line-item').each(function(i)
-    {
-      x=x+$(this).find('#line-item-inner').html() + '.';
-      q=q+$(this).find('.num').val() + '.';
-      products = products+$(this).find('#line-item-inner').html()+' -> '+$(this).find('.num').val() + ' ,';
-    });
-    var y=x.split('.');
-    var length=y.length-1;
-    y.splice(length,1);
-    var z=q.split('.');
-    var length=z.length-1;
-    z.splice(length,1);
-    var i;
-    for (i=0;i<y.length;i++)
-    {
-      $("#confirmname").append((i-(-1)) + "." + y[i] + "<br>");
-      $("#confirmquantity").append(z[i] + "<br>");
-    }
     var date=new Date();
     var hour=date.getHours();
     var minute=date.getMinutes();
     var time=hour + ":" + minute;
-    var n=document.getElementById("name-input").value;
-    var t=$('#total').html();
-    var t1=(($('#total').html())-($('#total').html())/10);
-    t1=Math.round(t1);
-    var m=document.getElementById("mobile-input").value;
-    var e=document.getElementById("email-input").value;
-    var a=document.getElementById("address-input").value;
-    var q = $('#area :selected').text();
-    var selectedtime=$('#selecttime :selected').text();
-    $(".confirmtotal").html("Your order Total is &#8377 " + t);
-
-
-
-
-    $(".confirmdetails").html("<b>Name:&nbsp</b>" + "<br>" + n + "<br><br>" +"<b>Mobile:&nbsp</b>" + "<br>" + m + "<br><br>" + "<b>Email:&nbsp</b>" + "<br>" +  e + "<br>");
-    $(".confirmaddress").html("<b>Address:&nbsp</b>" + "<br>" +  a)
-
+    var name=document.getElementById("name-input").value;
+    var total=$('#total').html();
+    var mobile=document.getElementById("mobile-input").value;
+    var email=document.getElementById("email-input").value;
+    var address=document.getElementById("address-input").value;
+    var delivery_area = $('#area :selected').text();
+    $(".confirmtotal").html("Your order Total is &#8377 " + total);
     $.ajax({
+
       type: "POST",
       url: 'create',
       dataType: 'json',
-      data: $.param({details: {customers_name: n,customers_street_address: a,customers_telephone: m,
-       customers_email_address: e,order_total: t,deliveryarea: q,time: time,selectedtime: selectedtime,product: y,quantity: z}}),
+      data: $.param({details: {customers_name: name,customers_street_address: address,customers_telephone: mobile,
+                     customers_email_address: email,order_total: total,deliveryarea: delivery_area,time: time}}),
       success: function ()
       {
-        $('#hmm').click();
+        $('#confirmed').click();
       },
       error: function ()
       {
-        $('#errorss').click();
+        $('#error_in_order').click();
       }
     });
+
+
 
     var slack_url =  $('#js-slack-url').html().trim();
     var post_data = "Name: "+n+"\\nAddress: "+a+"\\nPhone: "+m+"\\nEmail:"+e+"\\nTotal: "+t+"\\nArea: "+q+"\\nTime: "+time+"\\nProducts: "+products;
