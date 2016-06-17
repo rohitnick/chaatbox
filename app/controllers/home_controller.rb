@@ -25,7 +25,6 @@ class HomeController < ApplicationController
 	def add_line_item_to_order
      order=Order.current_order(cookies.signed[:guest_token])
 		 order.line_items.create(line_item_params.merge(quantity: 1))
-		 redirect_to_url('http://localhost:3000/')
 	end
      
 	def remove_line_item_from_order

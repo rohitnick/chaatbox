@@ -9,8 +9,11 @@ class Order < ActiveRecord::Base
   scope :incomplete, -> { where(status: 5)}
 
 	def self.current_order(token)
-			@current_order=Order.find_or_create_by(guest_token: token)
+			@current_order=Order.find_by(guest_token: token)
+			if @current_order.nil?
+			@current_order=Order.create(guest_token: token)
 			@current_order.update_attribute(:status,'Incomplete')
+			end
 
 		if @current_order
 			return @current_order
