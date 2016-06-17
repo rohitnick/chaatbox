@@ -1,4 +1,3 @@
-require 'pry'
 class HomeController < ApplicationController
   skip_before_filter  :verify_authenticity_token
 	before_action :create_guest_token
