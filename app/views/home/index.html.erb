@@ -1,17 +1,33 @@
-<div class="row container-fluid">
+<div class="rows_many :products, :through => :line_items
+	container-fluid">
   <div class="col-md-9">
   <div class="row">
      <p class="white font-22">Chaats</p>   
     <% @chaats.each do |chaat| %>
-    <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=chaat.id%>"">
-      <%= image_tag(chaat.image_url,:width => '100%' , :height => '100%', :class => "product-image")%>
+    <div class="col-md-3 col-sm-6 padding-5 js-product" style="cursor: pointer;" id="<%=chaat.id%>">
+			
+			<%= image_tag(chaat.image_url,:width => '100%' , :height => '100%', :class => "product-image")%>
 
       <div class="display-none well well-sm bg-white product-details js-product-details" >
         <h4 class="js-product-name item-name"><%= chaat.name %></h4>
         <small><%= chaat.title %></small>
         <br>
         <span class="item-price"> &#8377<i class="js-product-price"><%= chaat.price %> </i></span>
-      </div> 
+			</div>
+
+
+			<% if @order.present? %>
+				<% @order.line_items.each do |line_item| %>
+					<% if chaat.id==line_item.product_id %>
+						<script>
+							var id=<%= chaat.id %>
+							$("#" + id).addClass('js-product-selected');
+							$("#" + id).find('.js-product-details').addClass('bg-green');
+							$("#" + id).addClass('over');
+						</script>
+					<% end %>
+				<% end %>
+			<% end %>
     </div>
     <% end %>
 </div>
@@ -29,6 +45,18 @@
         <br>
         <span class="item-price"> &#8377<i class="js-product-price"><%= bev.price %> </i></span>
       </div> 
+        <% if @order.present? %>
+				<% @order.line_items.each do |line_item| %>
+					<% if bev.id==line_item.product_id %>
+						<script>
+							var id=<%= bev.id %>
+							$("#" + id).addClass('js-product-selected');
+							$("#" + id).find('.js-product-details').addClass('bg-green');
+							$("#" + id).addClass('over');
+						</script>
+					<% end %>
+				<% end %>
+			<% end %>
 
     </div>
     <% end %>
@@ -82,12 +110,12 @@
         </div>
         <div class="form-group hide">
           <div class="col-sm-8 col-sm-offset-3">
-            <input id="hmm" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-success">
+            <input id="confirmed" name="submit" type="button" data-toggle="modal" data-target="#confirm" value="Confirm Order" class="btn btn-success">
           </div>
         </div>
         <div class="form-group hide">
           <div class="col-sm-8 col-sm-offset-3">
-            <input id="errorss" name="submit" type="button" data-toggle="modal" data-target="#errorinorder" value="Error message" class="btn btn-success">
+            <input id="error_in_order" name="submit" type="button" data-toggle="modal" data-target="#errorinorder" value="Error message" class="btn btn-success">
           </div>
         </div>
       </form>
@@ -119,25 +147,34 @@
     </div>
   </div>
   <!-- End Delivery Details -->
+
+
+
+
   <!-- Order Summary -->
   <div id="line-items">
     <center class="dotted-bottom-border white">
       Order Details
     </center>
-  </div>
-  <!-- End Order Summary -->
-  <div class="finish-message display-none white">
-    <h3 class="text-center"><i class="data">Thanks For Ordering</i></h3>
-    <br>
-    <br>
-    <h5 class="text-center data">You Will Recieve order within 40 minutes </h5>
-  </div>
+	</div>	
+	
+    
+
+<!-- End Order Summary -->
+
+<div class="finish-message display-none white">
+	<h3 class="text-center"><i class="data">Thanks For Ordering</i></h3>
+	<br>
+	<br>
+	<h5 class="text-center data">You Will Recieve order within 40 minutes </h5>
+</div>
+
   <center>
     <% if Rails.application.config.sold_out %>
-      <button disabled="disabled" class="btn btn-success js-proceed">SOLD OUT</button>
+      <button class="btn btn-success js-proceed">SOLD OUT</button>
       <p class="white data">All our chaatboxes are sold out for today. Please check us back tomorrow and we will definitely have them available for you. </p>
     <% else %>
-      <button disabled="disabled"  class="btn btn-success js-proceed margin-top-5"> Proceed </button>
+      <button  class="btn btn-success js-proceed margin-top-5"> Proceed </button>
     <% end %>
   </center>
   <h4 class="please-select text-center red"></h4>
@@ -145,36 +182,86 @@
 
 </div>
 <center class="white">
-  <h4>Payable Amount : &#8377<span id="total">0</span><h4>
-<p class="white data">We have closed our services. For further inquires please drop us messages in the feedback form or ping us through our Facebook page. Thank You</p>
+  <h4>Payable Amount : &#8377<span id="total"></span><h4>
+<p class="white data hide">We have closed our services. For further inquires please drop us messages in the feedback form or ping us through our Facebook page. Thank You</p>
 <!-- <h6 class="white">*inclusive of packaging and delivery charges</h6> -->
-  </center> 
+  </center>
+
+
+
+
+<div id="line-item-container1" class="hide" >
+    <% if @order.present? %>
+		<% @order.line_items.each do |line_item| %>
+			<div class="well well-sm bg-white line-item margin-5" id="tag<%= line_item.product_id %>">
+     <div class="row">
+     <div class="col-sm-6 col-xs-6">
+			 <h5 id="line-item-inner" class="item-name"><%= Product.find(line_item.product_id).name %></h5>
+     </div>
+		 <div class="col-sm-1 col-xs-1 col-sm-offset-4 col-xs-offset-5 cross" id="cross<%= line_item.product_id %>" >
+			 <p class="red"><a href="#">&times</a></p>
+     </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+      <div class="input-group">
+				<span class="input-group-addon minus" id="minus<%= line_item.product_id %>"><b><a href="#">-</b></a></span>
+				<input type="integer" class="form-control num" area-label="Quantity" value="<%=line_item.quantity %>" id="num<%= line_item.product_id %>" readonly="readonly">
+				<span class="input-group-addon plus" id="plus<%= line_item.product_id %>"><b><a href="#">+</b></a></span>
+      </div>
+    </div>
+    <div class="col-md-6"> 
+			<span class="prices hide" id="prices<%= line_item.product_id %>"><%= Product.find(line_item.product_id).price %></span>
+			<span class="item-price"> &#8377<i class="pricess" id="pricess<%= line_item.product_id %>"><%= line_item.quantity * Product.find(line_item.product_id).price %></i></span>
+    </div>
+  </div>
+</div>
+<script>
+	var price=(<%= Product.find(line_item.product_id).price %>)/2;
+	var quantity=<%=line_item.quantity %>
+	var totalprice=price*quantity;
+		$('#total').html($('#total').html()-(-totalprice));
+	</script>
+<% end %>
+<% end %>
 </div>
 
 
-<div id="line-item-container" class="hide" >
-  <div class="well well-sm bg-white line-item margin-5">
+
+<script>
+	$('#line-items').append($('#line-item-container1').html());
+</script> 
+
+
+<div id="line-item-container2" class="hide" >
+
+    <div class="well well-sm bg-white line-item margin-5">
     <div class="row">
      <div class="col-sm-6 col-xs-6">
-       <h5 id="line-item-inner" class="item-name"> </h5>
+			 <h5 id="line-item-inner" class="item-name"></h5>
      </div>
      <div class="col-sm-1 col-xs-1 col-sm-offset-4 col-xs-offset-5 cross">
-       <p class="red"><a href="#">&times</a></p>
+			 <p class="red"><a href="#">&times</a></p>
      </div>
    </div>
    <div class="row">
     <div class="col-md-6">
       <div class="input-group">
         <span class="input-group-addon minus"><b><a href="#">-</b></a></span>
-        <input type="integer" class="form-control num" area-label="Quantity" value="1" readonly="readonly">
+				<input type="integer" class="form-control num" area-label="Quantity" value="1" readonly="readonly">
         <span class="input-group-addon plus"><b><a href="#">+</b></a></span>
       </div>
     </div>
     <div class="col-md-6"> 
-      <span class="prices hide"></span>
-      <span class="item-price"> &#8377<i class="pricess"></i></span>
+			<span class="prices hide"></span>
+			<span class="item-price"> &#8377<i class="pricess"></i></span>
     </div>
   </div>
+</div>
+</div>
+
+
+
 </div>
 </div>
 </div>
@@ -199,7 +286,7 @@
 								<%= image_tag "viveks.jpg",height: '120',class: 'img-circle' %>
 							</div>
 							<div class="data">
-<br>
+								<br>
 								<p><span style="font-size:19px">Vivek Srivastava</span>,
 								<a href="http://www.zoma.to/pMgPop">Zomato</a></p>
 								<p>Great Experience! Good amalgamation of cost, customer service and quality food. This was the best chaats I ever had in Bangalore. Chaatbox, chaats and other items were hot & fresh when delivered, good in taste and hygienic.
@@ -238,7 +325,8 @@
 					</div>
 				</div>
         <br/>
-			</section>
+				</section>
+
 <div class="modal" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

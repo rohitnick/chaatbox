@@ -23,21 +23,26 @@ $(document).on "page:change", ->
       $("#mobile-input").val("");
       $("#email-input").val("");
       $("#address-input").val("");
+      $.ajax 'remove_line_item_from_order' , 
+       type: "POST",
+       dataType: "JSON",
+       data: $.param({line_item: {product_id: id}})
     else
       name = $(this).find('.js-product-name').html() 
       price = $(this).find('.js-product-price').html()
       $('#total').html($('#total').html()-(-price))
-      $('#line-item-container .line-item').attr('id', "tag" + id)
-      $('#line-item-container .line-item .prices').attr('id','prices' + id)
-      $('#line-item-container .line-item .pricess').attr('id','pricess' + id)
-      $('#line-item-container .line-item .input-group .minus').attr('onclick', 'minus' + id + '()')
-      $('#line-item-container .line-item .input-group .plus').attr('onclick', 'plus' + id + '()')
-      $('#line-item-container .line-item .cross').attr('onclick', 'cross' + id + '()')
-      $('#line-item-container .line-item .input-group .num').attr('id','num' + id)
-      $('#line-item-container .line-item #line-item-inner').html(name)
-      $('#line-item-container .line-item .prices').html(price)
-      $('#line-item-container .line-item .pricess').html(price)
-      $('#line-items').append($('#line-item-container').html())
+      $('#line-item-container2 .line-item').attr('id', "tag" + id)
+      $('#line-item-container2 .line-item .prices').attr('id','prices' + id)
+      $('#line-item-container2 .line-item .pricess').attr('id','pricess' + id)
+      $('#line-item-container2 .line-item .input-group .minus').attr('id', 'minus' + id)
+      $('#line-item-container2 .line-item .input-group .plus').attr('id', 'plus' + id)
+      $('#line-item-container2 .line-item .cross').attr('id', 'cross' + id)
+      $('#line-item-container2 .line-item .input-group .num').attr('id','num' + id)
+      $('#line-item-container2 .line-item #line-item-inner').html(name)
+      $('#line-item-container2 .line-item .prices').html(price)
+      $('#line-item-container2 .line-item .pricess').html(price)
+      
+      $('#line-items').append($('#line-item-container2').html())
       $(this).addClass('js-product-selected')
       $(this).addClass('over')
       $(this).find('.js-product-details').addClass('bg-green')
@@ -45,6 +50,10 @@ $(document).on "page:change", ->
       $("#name-input").val("");
       $("#mobile-input").val("");
       $("#email-input").val("");
-      $("#address-input").val("");    
+      $("#address-input").val("");
+      $.ajax 'add_line_item_to_order', 
+       type: "POST",
+       dataType: "JSON",
+       data: $.param({line_item: {product_id: id}})    
       return
   return
